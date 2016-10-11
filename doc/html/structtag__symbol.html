@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Windows-1251">
+<title>Компилятор MathC.: Структура tag_symbol</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.4.6 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+    <li id="current"><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li><a href="files.html"><span>Файлы</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li><a href="hierarchy.html"><span>Иерархия&nbsp;классов</span></a></li>
+    <li><a href="functions.html"><span>Поля&nbsp;структур</span></a></li>
+  </ul></div>
+<h1>Структура tag_symbol</h1><!-- doxytag: class="tag_symbol" -->стуктура, описывающая символ в таблице символов  
+<a href="#_details">Подробнее...</a>
+<p>
+<code>#include &lt;<a class="el" href="symbol_8h-source.html">symbol.h</a>&gt;</code>
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Поля данных</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="8d9eae9e22ecc6d71288639260b57bfb"></a><!-- doxytag: member="tag_symbol::name" ref="8d9eae9e22ecc6d71288639260b57bfb" args="" -->
+char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag__symbol.html#8d9eae9e22ecc6d71288639260b57bfb">name</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">строковый идентификатор символа <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="212ccfa93ad4d282cc7980a24fb6647d"></a><!-- doxytag: member="tag_symbol::type" ref="212ccfa93ad4d282cc7980a24fb6647d" args="" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag__symbol.html#212ccfa93ad4d282cc7980a24fb6647d">type</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">битовая маска типа символа <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="97560dd8654280da1637c861c27b23bc"></a><!-- doxytag: member="tag_symbol::table" ref="97560dd8654280da1637c861c27b23bc" args="" -->
+<a class="el" href="structtag__symbol.html">tag_symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag__symbol.html#97560dd8654280da1637c861c27b23bc">table</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">указатель на локальную таблицу символов (для функций), значение типа val_t (для инициализированных переменных), строка типа char* для строк <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="503a82000cca2c77d8678ca52db69bec"></a><!-- doxytag: member="tag_symbol::next" ref="503a82000cca2c77d8678ca52db69bec" args="" -->
+<a class="el" href="structtag__symbol.html">tag_symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag__symbol.html#503a82000cca2c77d8678ca52db69bec">next</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">следующий символ в таблице символов <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="805fa093d632a27729b41cb1f96ee411"></a><!-- doxytag: member="tag_symbol::prev" ref="805fa093d632a27729b41cb1f96ee411" args="" -->
+<a class="el" href="structtag__symbol.html">tag_symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag__symbol.html#805fa093d632a27729b41cb1f96ee411">prev</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">предыдущий символ в таблице символов <br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+Центральная структура в компиляторе. Содержит всю информацию о переменных, функциях, константах, метках, временных переменных, и т.д. 
+<p>
+<hr>Объявления и описания членов структуры находятся в файле:<ul>
+<li><a class="el" href="symbol_8h-source.html">symbol.h</a></ul>
+<hr size="1"><address style="align: right;"><small>Документация по Компилятор MathC.. Последние изменения: Fri Dec 8 03:27:49 2006. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Windows-1251">
+<title>Компилятор MathC.: Файл asm_code.c</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.4.6 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+    <li><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li id="current"><a href="files.html"><span>Файлы</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Файлы</span></a></li>
+    <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+  </ul></div>
+<h1>Файл asm_code.c</h1>исходный текст функций генератора целевого кода <a href="#_details">Подробнее...</a>
+<p>
+<code>#include &quot;<a class="el" href="asm__code_8h-source.html">asm_code.h</a>&quot;</code><br>
+<code>#include &quot;stdio.h&quot;</code><br>
+<code>#include &quot;stdlib.h&quot;</code><br>
+<code>#include &quot;string.h&quot;</code><br>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Функции</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm__code_8c.html#1fb962cd2876c57489ba0331f2329e93">generate_asm_code</a> (FILE *where, <a class="el" href="structtag__symbol.html">symbol</a> *data, <a class="el" href="structtag__ctable.html">ctable_entry</a> *cod)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">генерирует ассемблерный файл, соответствующий заданной таблице кода и таблице символов  <a href="#1fb962cd2876c57489ba0331f2329e93"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm__code_8c.html#22418ac37c6a724d0103b6536a168e87">code2asm</a> (<a class="el" href="structtag__symbol.html">symbol</a> *<a class="el" href="symbol_8h.html#363b2553df3e9b4b723d668d59167daf">global_table</a>, <a class="el" href="structtag__ctable.html">ctable_entry</a> *cod, char *str)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">производит преобразование трехадресного кода функции в ассемблер  <a href="#22418ac37c6a724d0103b6536a168e87"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm__code_8c.html#95acb2a9fc9dbd2e182786f2bb3d7a34">op2asm</a> (<a class="el" href="structtag__symbol.html">symbol</a> *<a class="el" href="symbol_8h.html#363b2553df3e9b4b723d668d59167daf">global_table</a>, <a class="el" href="structtag__code.html">code</a> *c, <a class="el" href="structtag__symbol.html">symbol</a> *table, char *str)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">производит преобразование отдельного трехадресного оператора в код ассемблер  <a href="#95acb2a9fc9dbd2e182786f2bb3d7a34"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm__code_8c.html#14e760bdc00bbb17187a4939eb8a0310">local_var</a> (<a class="el" href="structtag__symbol.html">symbol</a> *<a class="el" href="symbol_8h.html#363b2553df3e9b4b723d668d59167daf">global_table</a>, <a class="el" href="structtag__symbol.html">symbol</a> *t, <a class="el" href="structtag__symbol.html">symbol</a> *s)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">возвращает строку, представляюшую значение символа в коде ассемблер  <a href="#14e760bdc00bbb17187a4939eb8a0310"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm__code_8c.html#ef642d16fcb91afa1e3e32cc65f77570">randomstr</a> (char *s, int len)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получить случайно сгенерированную строку  <a href="#ef642d16fcb91afa1e3e32cc65f77570"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm__code_8c.html#57ed2e5905e1753b10fe623b0ea940ae">local_addr</a> (<a class="el" href="structtag__symbol.html">symbol</a> *<a class="el" href="symbol_8h.html#363b2553df3e9b4b723d668d59167daf">global_table</a>, <a class="el" href="structtag__symbol.html">symbol</a> *t, <a class="el" href="structtag__symbol.html">symbol</a> *s)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">возвращает строку, представляюшую адрес символа в коде ассемблер  <a href="#57ed2e5905e1753b10fe623b0ea940ae"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm__code_8c.html#301c4bc8415469df9bf5ead9d01652f2">floatop_prepare</a> (char *str, <a class="el" href="structtag__code.html">code</a> *c, <a class="el" href="structtag__symbol.html">symbol</a> *<a class="el" href="symbol_8h.html#363b2553df3e9b4b723d668d59167daf">global_table</a>, <a class="el" href="structtag__symbol.html">symbol</a> *table, int ret_type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">производит необходимые приготовления для выполнения операции с вещественными числами  <a href="#301c4bc8415469df9bf5ead9d01652f2"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Переменные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c5cdc238836fe0971689a4229f29ba5f"></a><!-- doxytag: member="asm_code.c::rset" ref="c5cdc238836fe0971689a4229f29ba5f" args="[]" -->
+char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm__code_8c.html#c5cdc238836fe0971689a4229f29ba5f">rset</a> [] = &quot;01234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">исходный набор символов, из которых генерируется случайным образом строка <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6a1c4b6f29e7d5da81b0786bc5c8b8fc"></a><!-- doxytag: member="asm_code.c::chars" ref="6a1c4b6f29e7d5da81b0786bc5c8b8fc" args="" -->
+char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm__code_8c.html#6a1c4b6f29e7d5da81b0786bc5c8b8fc">chars</a> = &amp;<a class="el" href="asm__code_8c.html#c5cdc238836fe0971689a4229f29ba5f">rset</a>[11]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">выделенная из исходного набора строка с символами (так как генерируемая строка не должна начинаться с цифры) <br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+<dl compact><dt><b>Автор:</b></dt><dd>Чучва Дмитрий </dd></dl>
+<dl compact><dt><b>Дата:</b></dt><dd>08.12.2006</dd></dl>
+Содержит реализацию функций генератора целевого кода. <hr><h2>Функции</h2>
+<a class="anchor" name="22418ac37c6a724d0103b6536a168e87"></a><!-- doxytag: member="asm_code.c::code2asm" ref="22418ac37c6a724d0103b6536a168e87" args="(symbol *global_table, ctable_entry *cod, char *str)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">char* code2asm           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>global_table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__ctable.html">ctable_entry</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>cod</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>str</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит перевод списка операторов трехадресного кода функции в код ассемблер, используя информацию в глобальной и локальной таблицах символов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>global_table</em>&nbsp;</td><td>глобальная таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>cod</em>&nbsp;</td><td>список операторов трехадресного кода функции </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>строка, куда производить запись </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на сформированную строку </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="301c4bc8415469df9bf5ead9d01652f2"></a><!-- doxytag: member="asm_code.c::floatop_prepare" ref="301c4bc8415469df9bf5ead9d01652f2" args="(char *str, code *c, symbol *global_table, symbol *table, int ret_type)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">char* floatop_prepare           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__code.html">code</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>global_table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>ret_type</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция формирует ассемблерный код, который производит необходимые преобразования физического стека программы для последующего вызова операции-функции над вещественными аргументами из библиотеки работы с вещественными числами. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>строка, куда формировать </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td>трехадресная инструкция вещественного типа </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>global_table</em>&nbsp;</td><td>глобальная таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>локальная таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ret_type</em>&nbsp;</td><td>тип трехадресной инструкции </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на сформированную строку </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="1fb962cd2876c57489ba0331f2329e93"></a><!-- doxytag: member="asm_code.c::generate_asm_code" ref="1fb962cd2876c57489ba0331f2329e93" args="(FILE *where, symbol *data, ctable_entry *cod)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int generate_asm_code           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">FILE *&nbsp;</td>
+          <td class="mdname" nowrap> <em>where</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__ctable.html">ctable_entry</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>cod</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит обработку таблицы кода и таблицы символов, полученных в результате процесса синтаксически управляемой трансляции, и генерирует по ним целевой код ассемблер. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>where</em>&nbsp;</td><td>файл, куда генерировать </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>cod</em>&nbsp;</td><td>таблица кода </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>-1 - неудача, иначе - функция закончила свою работу без ошибок </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="57ed2e5905e1753b10fe623b0ea940ae"></a><!-- doxytag: member="asm_code.c::local_addr" ref="57ed2e5905e1753b10fe623b0ea940ae" args="(symbol *global_table, symbol *t, symbol *s)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">char* local_addr           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>global_table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>s</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция формирует строку, которая вычисляет адрес символа для передачи параметров функции по адресу и кладет его в физический стек программы. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>global_table</em>&nbsp;</td><td>глобальная таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>t</em>&nbsp;</td><td>локальная таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>символ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на сформированную строку в статическом буфере (необходимо сразу использовать, так как следующий вызов функции запишет в него другое значение) </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="14e760bdc00bbb17187a4939eb8a0310"></a><!-- doxytag: member="asm_code.c::local_var" ref="14e760bdc00bbb17187a4939eb8a0310" args="(symbol *global_table, symbol *t, symbol *s)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">char* local_var           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>global_table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>s</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция формирует строку в зависимости от того, в какой таблице (глобальной или локальной) находится символ. Код ассемблер будет представлять получение значения этого символа в виде [метка] (для глобальных) либо [ebp + число] (для локальных). <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>global_table</em>&nbsp;</td><td>глобальная таблица символовы </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>t</em>&nbsp;</td><td>локальная таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>символ </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на сформированную строку в статическом буфере (необходимо сразу использовать, так как следующий вызов функции запишет в него другое значение) </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="95acb2a9fc9dbd2e182786f2bb3d7a34"></a><!-- doxytag: member="asm_code.c::op2asm" ref="95acb2a9fc9dbd2e182786f2bb3d7a34" args="(symbol *global_table, code *c, symbol *table, char *str)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">char* op2asm           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>global_table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__code.html">code</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>str</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция получает элемент таблицы кода функции и переводит его в код ассемблер. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>global_table</em>&nbsp;</td><td>глобальная таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td>трехадресная инструкция </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>локальная таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>строка, куда производить запись </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на сформированную строку </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="ef642d16fcb91afa1e3e32cc65f77570"></a><!-- doxytag: member="asm_code.c::randomstr" ref="ef642d16fcb91afa1e3e32cc65f77570" args="(char *s, int len)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">char* randomstr           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>len</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция генерирует случайный набор символов, состоящий из заданного числа элементов. Используется для генерации имен меток в операторах цикла, ветвления. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>строка, куда генерировать </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>len</em>&nbsp;</td><td>количество символов, которое необходимо сгенерировать </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на сгенерированную строку </dd></dl>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Документация по Компилятор MathC.. Последние изменения: Fri Dec 8 03:27:49 2006. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
+</body>
+</html>

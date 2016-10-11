@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Windows-1251">
+<title>Компилятор MathC.: Файл main.c</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.4.6 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+    <li><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li id="current"><a href="files.html"><span>Файлы</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Файлы</span></a></li>
+    <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+  </ul></div>
+<h1>Файл main.c</h1>главный файл проекта <a href="#_details">Подробнее...</a>
+<p>
+<code>#include &quot;<a class="el" href="main_8h-source.html">main.h</a>&quot;</code><br>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Функции</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">точка входа в приложение  <a href="#0ddf1224851353fc92bfbff6f499fa97"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#01fc23b949cca837ca10f29e8f457e9b">static_error</a> (char *tstr, char *format,...)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">реализует вывод форматированных сообщений об ошибках  <a href="#01fc23b949cca837ca10f29e8f457e9b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#2ef30c42cbc289d899a8be5d2d8f77d0">usage</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">выводит информацию о параметрах командной строки  <a href="#2ef30c42cbc289d899a8be5d2d8f77d0"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Переменные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#501b314f49b3a9ff6e7be599d94686ee">lineno</a> = 1</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ea00bde7de8cb1208a9fbc75412c15d1"></a><!-- doxytag: member="main.c::curr_type" ref="ea00bde7de8cb1208a9fbc75412c15d1" args="" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ea00bde7de8cb1208a9fbc75412c15d1">curr_type</a> = TYPE_UNKNOWN</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тип текущего обрабатываемого символа при синтаксически управляемой трансляции <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a46b6b8b32954341b8782c018c5e4464"></a><!-- doxytag: member="main.c::param_count" ref="a46b6b8b32954341b8782c018c5e4464" args="" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a46b6b8b32954341b8782c018c5e4464">param_count</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">используется для вычисления и хранения количества параметров текущей обрабатываемой функции <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3f6196d8105a844858c0a576a1a03bc0"></a><!-- doxytag: member="main.c::param_index" ref="3f6196d8105a844858c0a576a1a03bc0" args="" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#3f6196d8105a844858c0a576a1a03bc0">param_index</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">номер текущего обрабатываемого параметра функции <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9c86d1c12a59ac5081cfcee30ad8c5e3"></a><!-- doxytag: member="main.c::expr_count" ref="9c86d1c12a59ac5081cfcee30ad8c5e3" args="" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#9c86d1c12a59ac5081cfcee30ad8c5e3">expr_count</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">используется для подсчета количества параметров при обработке вызова print в исходном текстве программы <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4d1caae9beb3c69b72353e18429a2581"></a><!-- doxytag: member="main.c::curr_symbol" ref="4d1caae9beb3c69b72353e18429a2581" args="" -->
+<a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#4d1caae9beb3c69b72353e18429a2581">curr_symbol</a> = NULL</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">текущий найденный символ <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="218a9909e2c5f1353b649be2b787af2e"></a><!-- doxytag: member="main.c::call_function" ref="218a9909e2c5f1353b649be2b787af2e" args="" -->
+<a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#218a9909e2c5f1353b649be2b787af2e">call_function</a> = NULL</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">указывает на символ функции, вызов которой обнаружен в исходном тексте программы <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="8e0323cd18f41f25484766c504986b06"></a><!-- doxytag: member="main.c::curr_function" ref="8e0323cd18f41f25484766c504986b06" args="" -->
+<a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#8e0323cd18f41f25484766c504986b06">curr_function</a> = NULL</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">указывает на символ текущей определяемой функции <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="2f2b184ca6696d0b9495f13887457737"></a><!-- doxytag: member="main.c::temp" ref="2f2b184ca6696d0b9495f13887457737" args="" -->
+<a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#2f2b184ca6696d0b9495f13887457737">temp</a> = NULL</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">указатель на временный символ <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#2e761ef58a53e45c838599d5131284ed">error_flag</a> = 0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d1c88bcbed0caf973171ac7b744d2378"></a><!-- doxytag: member="main.c::proc_definition" ref="d1c88bcbed0caf973171ac7b744d2378" args="" -->
+char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#d1c88bcbed0caf973171ac7b744d2378">proc_definition</a> = 0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">флаг "производится определение функции" <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab1e405faa3cbaab14811aee1d985379">syn_errflag</a> = 0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#3702dbbed634c23907d687da44cd8b23">compile_only</a> = 0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">флаг "только проверка синтаксиса"  <a href="#3702dbbed634c23907d687da44cd8b23"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="457e31f4ebc11623a9b7ca8a1e80b488"></a><!-- doxytag: member="main.c::valptr" ref="457e31f4ebc11623a9b7ca8a1e80b488" args="" -->
+<a class="el" href="unionvalptr__t.html">valptr_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#457e31f4ebc11623a9b7ca8a1e80b488">valptr</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">объединение, используемое для приведения типов symbol* и val_t <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#cf3886e01098a3daa11a5fb0e7003a0b">fci_stack</a> = NULL</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">стек вложенных вызовов  <a href="#cf3886e01098a3daa11a5fb0e7003a0b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="46af646807e0797e72b6e8945e7ea88b"></a><!-- doxytag: member="main.c::yyin" ref="46af646807e0797e72b6e8945e7ea88b" args="" -->
+FILE *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#46af646807e0797e72b6e8945e7ea88b">yyin</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">указатель на файловую переменную, используемую функциями yylex и yyparse <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b138aa8e11f58bcdcc7134adf240ea8c"></a><!-- doxytag: member="main.c::yydebug" ref="b138aa8e11f58bcdcc7134adf240ea8c" args="" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#b138aa8e11f58bcdcc7134adf240ea8c">yydebug</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">флаг "выодить отладочные сообщения" для bison <br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+<dl compact><dt><b>Автор:</b></dt><dd>Чучва Дмитрий </dd></dl>
+<dl compact><dt><b>Дата:</b></dt><dd>08.12.2006</dd></dl>
+Этот файл содержит фукнцию main, и описвает весь процесс компиляции: от запуска синтаксического анализатора до трансляции и компоновки полученного целевого кода. <hr><h2>Функции</h2>
+<a class="anchor" name="0ddf1224851353fc92bfbff6f499fa97"></a><!-- doxytag: member="main.c::main" ref="0ddf1224851353fc92bfbff6f499fa97" args="(int argc, char *argv[])" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int main           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname" nowrap> <em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>argv</em>[]</td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция main вызывается при старте приложения в языке C/C++ <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>argc</em>&nbsp;</td><td>количество переданных аргументов командной строки </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>argv[]</em>&nbsp;</td><td>массив аргументов командной строки </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>в случае ошибки возвращается 1, иначе 0. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="01fc23b949cca837ca10f29e8f457e9b"></a><!-- doxytag: member="main.c::static_error" ref="01fc23b949cca837ca10f29e8f457e9b" args="(char *tstr, char *format,...)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void static_error           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>tstr</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>&nbsp;</td>
+          <td class="mdname" nowrap> <em>...</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Реализует вывод сообщений о семантических ошибках, обнаруженных в тексте программы в процессе синтаксически управляемой трансляции. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>tstr</em>&nbsp;</td><td>строка, содержащая тип ошибки </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>format</em>&nbsp;</td><td>формат-срока в стиле printf, но с ограниченным набором спецификаторов типа </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="2ef30c42cbc289d899a8be5d2d8f77d0"></a><!-- doxytag: member="main.c::usage" ref="2ef30c42cbc289d899a8be5d2d8f77d0" args="()" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void usage           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция выводит информацию о способе запуска компилятора.     </td>
+  </tr>
+</table>
+<hr><h2>Переменные</h2>
+<a class="anchor" name="3702dbbed634c23907d687da44cd8b23"></a><!-- doxytag: member="main.c::compile_only" ref="3702dbbed634c23907d687da44cd8b23" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">char <a class="el" href="main_8h.html#3702dbbed634c23907d687da44cd8b23">compile_only</a> = 0          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Данный флаг устанавливается, если при обработке командной строки компилятора встретился флаг -с, который указывает компилятору сделать только проверку синтаксиса программы.     </td>
+  </tr>
+</table>
+<a class="anchor" name="2e761ef58a53e45c838599d5131284ed"></a><!-- doxytag: member="main.c::error_flag" ref="2e761ef58a53e45c838599d5131284ed" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">char <a class="el" href="main_8h.html#2e761ef58a53e45c838599d5131284ed">error_flag</a> = 0          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+флаг семантической ошибки в исходном тексте программы     </td>
+  </tr>
+</table>
+<a class="anchor" name="cf3886e01098a3daa11a5fb0e7003a0b"></a><!-- doxytag: member="main.c::fci_stack" ref="cf3886e01098a3daa11a5fb0e7003a0b" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a>* <a class="el" href="main_8h.html#cf3886e01098a3daa11a5fb0e7003a0b">fci_stack</a> = NULL          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<dl compact><dt><b>См. также:</b></dt><dd><a class="el" href="main_8h.html#0f7e6f42e59a5f0f70ff9fcc476822f7">fci_t</a> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="501b314f49b3a9ff6e7be599d94686ee"></a><!-- doxytag: member="main.c::lineno" ref="501b314f49b3a9ff6e7be599d94686ee" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int <a class="el" href="main_8h.html#501b314f49b3a9ff6e7be599d94686ee">lineno</a> = 1          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+содержит номер текущей строки исходного файла     </td>
+  </tr>
+</table>
+<a class="anchor" name="ab1e405faa3cbaab14811aee1d985379"></a><!-- doxytag: member="main.c::syn_errflag" ref="ab1e405faa3cbaab14811aee1d985379" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">char <a class="el" href="main_8h.html#ab1e405faa3cbaab14811aee1d985379">syn_errflag</a> = 0          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+флаг синтаксической ошибки в исходном тексте программы     </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Документация по Компилятор MathC.. Последние изменения: Fri Dec 8 03:27:49 2006. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
+</body>
+</html>

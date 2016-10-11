@@ -1,0 +1,1911 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Windows-1251">
+<title>Компилятор MathC.: Файл symbol.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.4.6 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+    <li><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li id="current"><a href="files.html"><span>Файлы</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Файлы</span></a></li>
+    <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+  </ul></div>
+<h1>Файл symbol.h</h1>заголовочный файл с описаниями, используемыми для работы с таблицей символов <a href="#_details">Подробнее...</a>
+<p>
+
+<p>
+<a href="symbol_8h-source.html">См. исходные тексты.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Структуры данных</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">union &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="uniontag__val.html">tag_val</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">объединение, служащее для хранения значения (может быть либо вещественным либо целым)  <a href="uniontag__val.html#_details">Подробнее...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag__symbol.html">tag_symbol</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">стуктура, описывающая символ в таблице символов  <a href="structtag__symbol.html#_details">Подробнее...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag__cstack.html">tag_cstack</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">структура, предназначенная для реализации вложенности функций  <a href="structtag__cstack.html#_details">Подробнее...</a><br></td></tr>
+<tr><td colspan="2"><br><h2>Макросы</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="070d2ce7b6bb7e5c05602aa8c308d0c4"></a><!-- doxytag: member="symbol.h::NULL" ref="070d2ce7b6bb7e5c05602aa8c308d0c4" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>&nbsp;&nbsp;&nbsp;0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">указатель на 0 <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="29b8b0ee6d08ccbc3f76cd4de12349c0"></a><!-- doxytag: member="symbol.h::MAX_SYMBOL_NAME" ref="29b8b0ee6d08ccbc3f76cd4de12349c0" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#29b8b0ee6d08ccbc3f76cd4de12349c0">MAX_SYMBOL_NAME</a>&nbsp;&nbsp;&nbsp;255</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">максимальная длина индентификатора <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d3d39216f4ddf09751e97009128f4e10"></a><!-- doxytag: member="symbol.h::INT_STR" ref="d3d39216f4ddf09751e97009128f4e10" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#d3d39216f4ddf09751e97009128f4e10">INT_STR</a>&nbsp;&nbsp;&nbsp;&quot;int&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">предопределенный идентификатор типа целое <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c92265c01086588073e8e3e0659987f8"></a><!-- doxytag: member="symbol.h::FLOAT_STR" ref="c92265c01086588073e8e3e0659987f8" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#c92265c01086588073e8e3e0659987f8">FLOAT_STR</a>&nbsp;&nbsp;&nbsp;&quot;float&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">предопределенный идентификатор типа вещественное <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="8b7c015d80ba87bc112adf52e6373488"></a><!-- doxytag: member="symbol.h::ENTRY_SYMBOL" ref="8b7c015d80ba87bc112adf52e6373488" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#8b7c015d80ba87bc112adf52e6373488">ENTRY_SYMBOL</a>&nbsp;&nbsp;&nbsp;&quot;entry&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">предопределенный идентификатор функции точки входа в программу аналогично main в С <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a>&nbsp;&nbsp;&nbsp;&quot;error&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">строка, которая используется для вывода сообщения об семантической ошибке  <a href="#8fe83ac76edc595f6b98cd4a4127aed5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#271d8f7f52be750e5c744a394ec71344">WARN</a>&nbsp;&nbsp;&nbsp;&quot;warning&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">строка, которая используется для вывода сообщения об семантическом предупреждении  <a href="#271d8f7f52be750e5c744a394ec71344"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="64cac228f3ce20387389ba0bcdf39853"></a><!-- doxytag: member="symbol.h::STRINGRESOURCE" ref="64cac228f3ce20387389ba0bcdf39853" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#64cac228f3ce20387389ba0bcdf39853">STRINGRESOURCE</a>&nbsp;&nbsp;&nbsp;&quot;STR&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">префикс идентификаторов строк в таблице символов <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="05057013170972c83c48ac96c9105fe6"></a><!-- doxytag: member="symbol.h::TEMPPREFIX" ref="05057013170972c83c48ac96c9105fe6" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#05057013170972c83c48ac96c9105fe6">TEMPPREFIX</a>&nbsp;&nbsp;&nbsp;&quot;TMP&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">префикс идентификаторов временных переменных в таблице символов <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="306034a4521c9f45ac7d90974be770ca"></a><!-- doxytag: member="symbol.h::CONSTANTSNAME" ref="306034a4521c9f45ac7d90974be770ca" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#306034a4521c9f45ac7d90974be770ca">CONSTANTSNAME</a>&nbsp;&nbsp;&nbsp;&quot;0CONST&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">префикс-идентификатор для констант в таблице символов <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c8d06ea56ed5e8a47173527802163035"></a><!-- doxytag: member="symbol.h::LABELPREFIX" ref="c8d06ea56ed5e8a47173527802163035" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#c8d06ea56ed5e8a47173527802163035">LABELPREFIX</a>&nbsp;&nbsp;&nbsp;&quot;LB&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">префикс идентификаторов меток в таблице символов <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6dcd4150745a22ac919ba1d277718ca6"></a><!-- doxytag: member="symbol.h::TYPE_UNKNOWN" ref="6dcd4150745a22ac919ba1d277718ca6" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#6dcd4150745a22ac919ba1d277718ca6">TYPE_UNKNOWN</a>&nbsp;&nbsp;&nbsp;0x0000</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тип символа - неизвестный <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4e38e7cab7c37f9e18829236dc1b8fbb"></a><!-- doxytag: member="symbol.h::TYPE_DECLARED" ref="4e38e7cab7c37f9e18829236dc1b8fbb" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#4e38e7cab7c37f9e18829236dc1b8fbb">TYPE_DECLARED</a>&nbsp;&nbsp;&nbsp;0x0001</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ объявлен <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="48e6937dfae6c81ea08cbc21a7e51e4f"></a><!-- doxytag: member="symbol.h::TYPE_DEFINED" ref="48e6937dfae6c81ea08cbc21a7e51e4f" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#48e6937dfae6c81ea08cbc21a7e51e4f">TYPE_DEFINED</a>&nbsp;&nbsp;&nbsp;0x0002</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ определен <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="794c617be0f86bc66e539d5cf1f351dd"></a><!-- doxytag: member="symbol.h::TYPE_VAR" ref="794c617be0f86bc66e539d5cf1f351dd" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#794c617be0f86bc66e539d5cf1f351dd">TYPE_VAR</a>&nbsp;&nbsp;&nbsp;0x0004</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является переменной <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6dcb8fc96767508aa3255c89bd5ec031"></a><!-- doxytag: member="symbol.h::TYPE_PROC" ref="6dcb8fc96767508aa3255c89bd5ec031" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#6dcb8fc96767508aa3255c89bd5ec031">TYPE_PROC</a>&nbsp;&nbsp;&nbsp;0x0008</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является функцией <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="8717844668a0a7f1d94e28aceef44ebc"></a><!-- doxytag: member="symbol.h::TYPE_ARG" ref="8717844668a0a7f1d94e28aceef44ebc" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#8717844668a0a7f1d94e28aceef44ebc">TYPE_ARG</a>&nbsp;&nbsp;&nbsp;0x0010</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является аргументом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f0da0357cad8207ea4405182ee64fc59"></a><!-- doxytag: member="symbol.h::TYPE_CONST" ref="f0da0357cad8207ea4405182ee64fc59" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#f0da0357cad8207ea4405182ee64fc59">TYPE_CONST</a>&nbsp;&nbsp;&nbsp;0x0020</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является константой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d2ab457bbe915930d6174464808a33e2"></a><!-- doxytag: member="symbol.h::TYPE_LABEL" ref="d2ab457bbe915930d6174464808a33e2" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#d2ab457bbe915930d6174464808a33e2">TYPE_LABEL</a>&nbsp;&nbsp;&nbsp;0x0040</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является меткой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="deecb08c1fbaa953cf1bd14773b57789"></a><!-- doxytag: member="symbol.h::TYPE_TEMP" ref="deecb08c1fbaa953cf1bd14773b57789" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#deecb08c1fbaa953cf1bd14773b57789">TYPE_TEMP</a>&nbsp;&nbsp;&nbsp;0x0080</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ временный <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="56e5f9a95536838408fcca8f22d541b4"></a><!-- doxytag: member="symbol.h::TYPE_INT" ref="56e5f9a95536838408fcca8f22d541b4" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#56e5f9a95536838408fcca8f22d541b4">TYPE_INT</a>&nbsp;&nbsp;&nbsp;0x0100</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тип символа целый <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="105c7addfad52601f4d079673eae7982"></a><!-- doxytag: member="symbol.h::TYPE_FLOAT" ref="105c7addfad52601f4d079673eae7982" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#105c7addfad52601f4d079673eae7982">TYPE_FLOAT</a>&nbsp;&nbsp;&nbsp;0x0200</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тип символа вещественный <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4e4e428e3a6a191834e3ff63bd301866"></a><!-- doxytag: member="symbol.h::TYPE_STRING" ref="4e4e428e3a6a191834e3ff63bd301866" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#4e4e428e3a6a191834e3ff63bd301866">TYPE_STRING</a>&nbsp;&nbsp;&nbsp;0x0400</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тип символа строка <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="56f27cface645d01a2daac4c4fd20174"></a><!-- doxytag: member="symbol.h::IS_DEFINED" ref="56f27cface645d01a2daac4c4fd20174" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#56f27cface645d01a2daac4c4fd20174">IS_DEFINED</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_DEFINED)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ определенным <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="59e2ee051ac6afa891b17a705396f6df"></a><!-- doxytag: member="symbol.h::IS_DECLARED" ref="59e2ee051ac6afa891b17a705396f6df" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#59e2ee051ac6afa891b17a705396f6df">IS_DECLARED</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_DECLARED)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ объявленным <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e81b87d351dea17ae0b4fdfd798cfca3"></a><!-- doxytag: member="symbol.h::IS_PROC" ref="e81b87d351dea17ae0b4fdfd798cfca3" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#e81b87d351dea17ae0b4fdfd798cfca3">IS_PROC</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_PROC)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ функцией <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f536cf6841e9d6e027d93a59af0dd628"></a><!-- doxytag: member="symbol.h::IS_VAR" ref="f536cf6841e9d6e027d93a59af0dd628" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#f536cf6841e9d6e027d93a59af0dd628">IS_VAR</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_VAR)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ переменной <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="13b7edd90f731c3b1718b23fc062b044"></a><!-- doxytag: member="symbol.h::IS_ARG" ref="13b7edd90f731c3b1718b23fc062b044" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#13b7edd90f731c3b1718b23fc062b044">IS_ARG</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_ARG)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ аргументом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b4ecad5c63685994c40689206d42e578"></a><!-- doxytag: member="symbol.h::IS_CONST" ref="b4ecad5c63685994c40689206d42e578" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#b4ecad5c63685994c40689206d42e578">IS_CONST</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_CONST)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ константой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="22dc0f3c2183a16280e21a25f9fddad6"></a><!-- doxytag: member="symbol.h::IS_LABEL" ref="22dc0f3c2183a16280e21a25f9fddad6" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#22dc0f3c2183a16280e21a25f9fddad6">IS_LABEL</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_LABEL)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ меткой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="86056da10ed9e1c7dd17c251937a9609"></a><!-- doxytag: member="symbol.h::IS_TEMP" ref="86056da10ed9e1c7dd17c251937a9609" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#86056da10ed9e1c7dd17c251937a9609">IS_TEMP</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_TEMP)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ временным символом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6711bb212976ae81ec74be2a08756445"></a><!-- doxytag: member="symbol.h::IS_STRING" ref="6711bb212976ae81ec74be2a08756445" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#6711bb212976ae81ec74be2a08756445">IS_STRING</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_STRING)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ строкой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="0dfcec4dbe7f1ee89038423da916f223"></a><!-- doxytag: member="symbol.h::DECLARE_VAR" ref="0dfcec4dbe7f1ee89038423da916f223" args="(s, typ)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#0dfcec4dbe7f1ee89038423da916f223">DECLARE_VAR</a>(s, typ)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_VAR | typ;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает переменную объявленной с заданным типом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="1debb215687dca6c01c455aed8d14c84"></a><!-- doxytag: member="symbol.h::DECLARE_ARG" ref="1debb215687dca6c01c455aed8d14c84" args="(s, typ)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#1debb215687dca6c01c455aed8d14c84">DECLARE_ARG</a>(s, typ)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_ARG | typ;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает аргумент объявленной с заданным типом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="2a012dededb4c459ea6d36a5d66ea726"></a><!-- doxytag: member="symbol.h::DECLARE_CONST" ref="2a012dededb4c459ea6d36a5d66ea726" args="(s, typ)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#2a012dededb4c459ea6d36a5d66ea726">DECLARE_CONST</a>(s, typ)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_ARG | typ;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает константу объявленной с заданным типом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="443770a4af47b61cd2640bd16f5df446"></a><!-- doxytag: member="symbol.h::DECLARE_LABEL" ref="443770a4af47b61cd2640bd16f5df446" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#443770a4af47b61cd2640bd16f5df446">DECLARE_LABEL</a>(s)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_LABEL;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает метку объявленной <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="19e47dc44975af4124918164e4dc1b19"></a><!-- doxytag: member="symbol.h::DECLARE_PROC" ref="19e47dc44975af4124918164e4dc1b19" args="(s, typ)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#19e47dc44975af4124918164e4dc1b19">DECLARE_PROC</a>(s, typ)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_PROC | typ;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает функцию объявленной с заданным типом возвращаемого значения <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d33e16105f05c32f0b31c4c7427afa2a"></a><!-- doxytag: member="symbol.h::DEFINE" ref="d33e16105f05c32f0b31c4c7427afa2a" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#d33e16105f05c32f0b31c4c7427afa2a">DEFINE</a>(s)&nbsp;&nbsp;&nbsp;s -&gt; type |= TYPE_DEFINED | TYPE_DECLARED;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает символ определенным <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d950247edab03a6f3d2fcb2ae18b4d81"></a><!-- doxytag: member="symbol.h::TYPE_OF" ref="d950247edab03a6f3d2fcb2ae18b4d81" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#d950247edab03a6f3d2fcb2ae18b4d81">TYPE_OF</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; (TYPE_FLOAT | TYPE_INT))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получает тип символа (целый/вещественный) <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="070d2ce7b6bb7e5c05602aa8c308d0c4"></a><!-- doxytag: member="symbol.h::NULL" ref="070d2ce7b6bb7e5c05602aa8c308d0c4" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>&nbsp;&nbsp;&nbsp;0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">указатель на 0 <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="29b8b0ee6d08ccbc3f76cd4de12349c0"></a><!-- doxytag: member="symbol.h::MAX_SYMBOL_NAME" ref="29b8b0ee6d08ccbc3f76cd4de12349c0" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#29b8b0ee6d08ccbc3f76cd4de12349c0">MAX_SYMBOL_NAME</a>&nbsp;&nbsp;&nbsp;255</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">максимальная длина индентификатора <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d3d39216f4ddf09751e97009128f4e10"></a><!-- doxytag: member="symbol.h::INT_STR" ref="d3d39216f4ddf09751e97009128f4e10" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#d3d39216f4ddf09751e97009128f4e10">INT_STR</a>&nbsp;&nbsp;&nbsp;&quot;int&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">предопределенный идентификатор типа целое <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c92265c01086588073e8e3e0659987f8"></a><!-- doxytag: member="symbol.h::FLOAT_STR" ref="c92265c01086588073e8e3e0659987f8" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#c92265c01086588073e8e3e0659987f8">FLOAT_STR</a>&nbsp;&nbsp;&nbsp;&quot;float&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">предопределенный идентификатор типа вещественное <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="8b7c015d80ba87bc112adf52e6373488"></a><!-- doxytag: member="symbol.h::ENTRY_SYMBOL" ref="8b7c015d80ba87bc112adf52e6373488" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#8b7c015d80ba87bc112adf52e6373488">ENTRY_SYMBOL</a>&nbsp;&nbsp;&nbsp;&quot;entry&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">предопределенный идентификатор функции точки входа в программу аналогично main в С <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a>&nbsp;&nbsp;&nbsp;&quot;error&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">строка, которая используется для вывода сообщения об семантической ошибке  <a href="#8fe83ac76edc595f6b98cd4a4127aed5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#271d8f7f52be750e5c744a394ec71344">WARN</a>&nbsp;&nbsp;&nbsp;&quot;warning&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">строка, которая используется для вывода сообщения об семантическом предупреждении  <a href="#271d8f7f52be750e5c744a394ec71344"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="64cac228f3ce20387389ba0bcdf39853"></a><!-- doxytag: member="symbol.h::STRINGRESOURCE" ref="64cac228f3ce20387389ba0bcdf39853" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#64cac228f3ce20387389ba0bcdf39853">STRINGRESOURCE</a>&nbsp;&nbsp;&nbsp;&quot;STR&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">префикс идентификаторов строк в таблице символов <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="05057013170972c83c48ac96c9105fe6"></a><!-- doxytag: member="symbol.h::TEMPPREFIX" ref="05057013170972c83c48ac96c9105fe6" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#05057013170972c83c48ac96c9105fe6">TEMPPREFIX</a>&nbsp;&nbsp;&nbsp;&quot;TMP&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">префикс идентификаторов временных переменных в таблице символов <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="306034a4521c9f45ac7d90974be770ca"></a><!-- doxytag: member="symbol.h::CONSTANTSNAME" ref="306034a4521c9f45ac7d90974be770ca" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#306034a4521c9f45ac7d90974be770ca">CONSTANTSNAME</a>&nbsp;&nbsp;&nbsp;&quot;0CONST&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">префикс-идентификатор для констант в таблице символов <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c8d06ea56ed5e8a47173527802163035"></a><!-- doxytag: member="symbol.h::LABELPREFIX" ref="c8d06ea56ed5e8a47173527802163035" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#c8d06ea56ed5e8a47173527802163035">LABELPREFIX</a>&nbsp;&nbsp;&nbsp;&quot;LB&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">префикс идентификаторов меток в таблице символов <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6dcd4150745a22ac919ba1d277718ca6"></a><!-- doxytag: member="symbol.h::TYPE_UNKNOWN" ref="6dcd4150745a22ac919ba1d277718ca6" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#6dcd4150745a22ac919ba1d277718ca6">TYPE_UNKNOWN</a>&nbsp;&nbsp;&nbsp;0x0000</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тип символа - неизвестный <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4e38e7cab7c37f9e18829236dc1b8fbb"></a><!-- doxytag: member="symbol.h::TYPE_DECLARED" ref="4e38e7cab7c37f9e18829236dc1b8fbb" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#4e38e7cab7c37f9e18829236dc1b8fbb">TYPE_DECLARED</a>&nbsp;&nbsp;&nbsp;0x0001</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ объявлен <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="48e6937dfae6c81ea08cbc21a7e51e4f"></a><!-- doxytag: member="symbol.h::TYPE_DEFINED" ref="48e6937dfae6c81ea08cbc21a7e51e4f" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#48e6937dfae6c81ea08cbc21a7e51e4f">TYPE_DEFINED</a>&nbsp;&nbsp;&nbsp;0x0002</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ определен <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="794c617be0f86bc66e539d5cf1f351dd"></a><!-- doxytag: member="symbol.h::TYPE_VAR" ref="794c617be0f86bc66e539d5cf1f351dd" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#794c617be0f86bc66e539d5cf1f351dd">TYPE_VAR</a>&nbsp;&nbsp;&nbsp;0x0004</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является переменной <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6dcb8fc96767508aa3255c89bd5ec031"></a><!-- doxytag: member="symbol.h::TYPE_PROC" ref="6dcb8fc96767508aa3255c89bd5ec031" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#6dcb8fc96767508aa3255c89bd5ec031">TYPE_PROC</a>&nbsp;&nbsp;&nbsp;0x0008</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является функцией <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="8717844668a0a7f1d94e28aceef44ebc"></a><!-- doxytag: member="symbol.h::TYPE_ARG" ref="8717844668a0a7f1d94e28aceef44ebc" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#8717844668a0a7f1d94e28aceef44ebc">TYPE_ARG</a>&nbsp;&nbsp;&nbsp;0x0010</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является аргументом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f0da0357cad8207ea4405182ee64fc59"></a><!-- doxytag: member="symbol.h::TYPE_CONST" ref="f0da0357cad8207ea4405182ee64fc59" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#f0da0357cad8207ea4405182ee64fc59">TYPE_CONST</a>&nbsp;&nbsp;&nbsp;0x0020</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является константой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d2ab457bbe915930d6174464808a33e2"></a><!-- doxytag: member="symbol.h::TYPE_LABEL" ref="d2ab457bbe915930d6174464808a33e2" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#d2ab457bbe915930d6174464808a33e2">TYPE_LABEL</a>&nbsp;&nbsp;&nbsp;0x0040</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является меткой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="deecb08c1fbaa953cf1bd14773b57789"></a><!-- doxytag: member="symbol.h::TYPE_TEMP" ref="deecb08c1fbaa953cf1bd14773b57789" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#deecb08c1fbaa953cf1bd14773b57789">TYPE_TEMP</a>&nbsp;&nbsp;&nbsp;0x0080</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ временный <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="56e5f9a95536838408fcca8f22d541b4"></a><!-- doxytag: member="symbol.h::TYPE_INT" ref="56e5f9a95536838408fcca8f22d541b4" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#56e5f9a95536838408fcca8f22d541b4">TYPE_INT</a>&nbsp;&nbsp;&nbsp;0x0100</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тип символа целый <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="105c7addfad52601f4d079673eae7982"></a><!-- doxytag: member="symbol.h::TYPE_FLOAT" ref="105c7addfad52601f4d079673eae7982" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#105c7addfad52601f4d079673eae7982">TYPE_FLOAT</a>&nbsp;&nbsp;&nbsp;0x0200</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тип символа вещественный <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4e4e428e3a6a191834e3ff63bd301866"></a><!-- doxytag: member="symbol.h::TYPE_STRING" ref="4e4e428e3a6a191834e3ff63bd301866" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#4e4e428e3a6a191834e3ff63bd301866">TYPE_STRING</a>&nbsp;&nbsp;&nbsp;0x0400</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тип символа строка <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="56f27cface645d01a2daac4c4fd20174"></a><!-- doxytag: member="symbol.h::IS_DEFINED" ref="56f27cface645d01a2daac4c4fd20174" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#56f27cface645d01a2daac4c4fd20174">IS_DEFINED</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_DEFINED)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ определенным <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="59e2ee051ac6afa891b17a705396f6df"></a><!-- doxytag: member="symbol.h::IS_DECLARED" ref="59e2ee051ac6afa891b17a705396f6df" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#59e2ee051ac6afa891b17a705396f6df">IS_DECLARED</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_DECLARED)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ объявленным <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e81b87d351dea17ae0b4fdfd798cfca3"></a><!-- doxytag: member="symbol.h::IS_PROC" ref="e81b87d351dea17ae0b4fdfd798cfca3" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#e81b87d351dea17ae0b4fdfd798cfca3">IS_PROC</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_PROC)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ функцией <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f536cf6841e9d6e027d93a59af0dd628"></a><!-- doxytag: member="symbol.h::IS_VAR" ref="f536cf6841e9d6e027d93a59af0dd628" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#f536cf6841e9d6e027d93a59af0dd628">IS_VAR</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_VAR)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ переменной <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="13b7edd90f731c3b1718b23fc062b044"></a><!-- doxytag: member="symbol.h::IS_ARG" ref="13b7edd90f731c3b1718b23fc062b044" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#13b7edd90f731c3b1718b23fc062b044">IS_ARG</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_ARG)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ аргументом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b4ecad5c63685994c40689206d42e578"></a><!-- doxytag: member="symbol.h::IS_CONST" ref="b4ecad5c63685994c40689206d42e578" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#b4ecad5c63685994c40689206d42e578">IS_CONST</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_CONST)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ константой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="22dc0f3c2183a16280e21a25f9fddad6"></a><!-- doxytag: member="symbol.h::IS_LABEL" ref="22dc0f3c2183a16280e21a25f9fddad6" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#22dc0f3c2183a16280e21a25f9fddad6">IS_LABEL</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_LABEL)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ меткой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="86056da10ed9e1c7dd17c251937a9609"></a><!-- doxytag: member="symbol.h::IS_TEMP" ref="86056da10ed9e1c7dd17c251937a9609" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#86056da10ed9e1c7dd17c251937a9609">IS_TEMP</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_TEMP)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ временным символом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6711bb212976ae81ec74be2a08756445"></a><!-- doxytag: member="symbol.h::IS_STRING" ref="6711bb212976ae81ec74be2a08756445" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#6711bb212976ae81ec74be2a08756445">IS_STRING</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_STRING)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ строкой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="0dfcec4dbe7f1ee89038423da916f223"></a><!-- doxytag: member="symbol.h::DECLARE_VAR" ref="0dfcec4dbe7f1ee89038423da916f223" args="(s, typ)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#0dfcec4dbe7f1ee89038423da916f223">DECLARE_VAR</a>(s, typ)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_VAR | typ;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает переменную объявленной с заданным типом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="1debb215687dca6c01c455aed8d14c84"></a><!-- doxytag: member="symbol.h::DECLARE_ARG" ref="1debb215687dca6c01c455aed8d14c84" args="(s, typ)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#1debb215687dca6c01c455aed8d14c84">DECLARE_ARG</a>(s, typ)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_ARG | typ;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает аргумент объявленной с заданным типом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="2a012dededb4c459ea6d36a5d66ea726"></a><!-- doxytag: member="symbol.h::DECLARE_CONST" ref="2a012dededb4c459ea6d36a5d66ea726" args="(s, typ)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#2a012dededb4c459ea6d36a5d66ea726">DECLARE_CONST</a>(s, typ)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_ARG | typ;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает константу объявленной с заданным типом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="443770a4af47b61cd2640bd16f5df446"></a><!-- doxytag: member="symbol.h::DECLARE_LABEL" ref="443770a4af47b61cd2640bd16f5df446" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#443770a4af47b61cd2640bd16f5df446">DECLARE_LABEL</a>(s)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_LABEL;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает метку объявленной <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="19e47dc44975af4124918164e4dc1b19"></a><!-- doxytag: member="symbol.h::DECLARE_PROC" ref="19e47dc44975af4124918164e4dc1b19" args="(s, typ)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#19e47dc44975af4124918164e4dc1b19">DECLARE_PROC</a>(s, typ)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_PROC | typ;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает функцию объявленной с заданным типом возвращаемого значения <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d33e16105f05c32f0b31c4c7427afa2a"></a><!-- doxytag: member="symbol.h::DEFINE" ref="d33e16105f05c32f0b31c4c7427afa2a" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#d33e16105f05c32f0b31c4c7427afa2a">DEFINE</a>(s)&nbsp;&nbsp;&nbsp;s -&gt; type |= TYPE_DEFINED | TYPE_DECLARED;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает символ определенным <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d950247edab03a6f3d2fcb2ae18b4d81"></a><!-- doxytag: member="symbol.h::TYPE_OF" ref="d950247edab03a6f3d2fcb2ae18b4d81" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#d950247edab03a6f3d2fcb2ae18b4d81">TYPE_OF</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; (TYPE_FLOAT | TYPE_INT))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получает тип символа (целый/вещественный) <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="070d2ce7b6bb7e5c05602aa8c308d0c4"></a><!-- doxytag: member="symbol.h::NULL" ref="070d2ce7b6bb7e5c05602aa8c308d0c4" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>&nbsp;&nbsp;&nbsp;0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">указатель на 0 <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="29b8b0ee6d08ccbc3f76cd4de12349c0"></a><!-- doxytag: member="symbol.h::MAX_SYMBOL_NAME" ref="29b8b0ee6d08ccbc3f76cd4de12349c0" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#29b8b0ee6d08ccbc3f76cd4de12349c0">MAX_SYMBOL_NAME</a>&nbsp;&nbsp;&nbsp;255</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">максимальная длина индентификатора <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d3d39216f4ddf09751e97009128f4e10"></a><!-- doxytag: member="symbol.h::INT_STR" ref="d3d39216f4ddf09751e97009128f4e10" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#d3d39216f4ddf09751e97009128f4e10">INT_STR</a>&nbsp;&nbsp;&nbsp;&quot;int&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">предопределенный идентификатор типа целое <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c92265c01086588073e8e3e0659987f8"></a><!-- doxytag: member="symbol.h::FLOAT_STR" ref="c92265c01086588073e8e3e0659987f8" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#c92265c01086588073e8e3e0659987f8">FLOAT_STR</a>&nbsp;&nbsp;&nbsp;&quot;float&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">предопределенный идентификатор типа вещественное <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="8b7c015d80ba87bc112adf52e6373488"></a><!-- doxytag: member="symbol.h::ENTRY_SYMBOL" ref="8b7c015d80ba87bc112adf52e6373488" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#8b7c015d80ba87bc112adf52e6373488">ENTRY_SYMBOL</a>&nbsp;&nbsp;&nbsp;&quot;entry&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">предопределенный идентификатор функции точки входа в программу аналогично main в С <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a>&nbsp;&nbsp;&nbsp;&quot;error&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">строка, которая используется для вывода сообщения об семантической ошибке  <a href="#8fe83ac76edc595f6b98cd4a4127aed5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#271d8f7f52be750e5c744a394ec71344">WARN</a>&nbsp;&nbsp;&nbsp;&quot;warning&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">строка, которая используется для вывода сообщения об семантическом предупреждении  <a href="#271d8f7f52be750e5c744a394ec71344"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="64cac228f3ce20387389ba0bcdf39853"></a><!-- doxytag: member="symbol.h::STRINGRESOURCE" ref="64cac228f3ce20387389ba0bcdf39853" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#64cac228f3ce20387389ba0bcdf39853">STRINGRESOURCE</a>&nbsp;&nbsp;&nbsp;&quot;STR&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">префикс идентификаторов строк в таблице символов <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="05057013170972c83c48ac96c9105fe6"></a><!-- doxytag: member="symbol.h::TEMPPREFIX" ref="05057013170972c83c48ac96c9105fe6" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#05057013170972c83c48ac96c9105fe6">TEMPPREFIX</a>&nbsp;&nbsp;&nbsp;&quot;TMP&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">префикс идентификаторов временных переменных в таблице символов <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="306034a4521c9f45ac7d90974be770ca"></a><!-- doxytag: member="symbol.h::CONSTANTSNAME" ref="306034a4521c9f45ac7d90974be770ca" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#306034a4521c9f45ac7d90974be770ca">CONSTANTSNAME</a>&nbsp;&nbsp;&nbsp;&quot;0CONST&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">префикс-идентификатор для констант в таблице символов <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c8d06ea56ed5e8a47173527802163035"></a><!-- doxytag: member="symbol.h::LABELPREFIX" ref="c8d06ea56ed5e8a47173527802163035" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#c8d06ea56ed5e8a47173527802163035">LABELPREFIX</a>&nbsp;&nbsp;&nbsp;&quot;LB&quot;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">префикс идентификаторов меток в таблице символов <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6dcd4150745a22ac919ba1d277718ca6"></a><!-- doxytag: member="symbol.h::TYPE_UNKNOWN" ref="6dcd4150745a22ac919ba1d277718ca6" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#6dcd4150745a22ac919ba1d277718ca6">TYPE_UNKNOWN</a>&nbsp;&nbsp;&nbsp;0x0000</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тип символа - неизвестный <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4e38e7cab7c37f9e18829236dc1b8fbb"></a><!-- doxytag: member="symbol.h::TYPE_DECLARED" ref="4e38e7cab7c37f9e18829236dc1b8fbb" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#4e38e7cab7c37f9e18829236dc1b8fbb">TYPE_DECLARED</a>&nbsp;&nbsp;&nbsp;0x0001</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ объявлен <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="48e6937dfae6c81ea08cbc21a7e51e4f"></a><!-- doxytag: member="symbol.h::TYPE_DEFINED" ref="48e6937dfae6c81ea08cbc21a7e51e4f" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#48e6937dfae6c81ea08cbc21a7e51e4f">TYPE_DEFINED</a>&nbsp;&nbsp;&nbsp;0x0002</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ определен <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="794c617be0f86bc66e539d5cf1f351dd"></a><!-- doxytag: member="symbol.h::TYPE_VAR" ref="794c617be0f86bc66e539d5cf1f351dd" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#794c617be0f86bc66e539d5cf1f351dd">TYPE_VAR</a>&nbsp;&nbsp;&nbsp;0x0004</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является переменной <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6dcb8fc96767508aa3255c89bd5ec031"></a><!-- doxytag: member="symbol.h::TYPE_PROC" ref="6dcb8fc96767508aa3255c89bd5ec031" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#6dcb8fc96767508aa3255c89bd5ec031">TYPE_PROC</a>&nbsp;&nbsp;&nbsp;0x0008</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является функцией <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="8717844668a0a7f1d94e28aceef44ebc"></a><!-- doxytag: member="symbol.h::TYPE_ARG" ref="8717844668a0a7f1d94e28aceef44ebc" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#8717844668a0a7f1d94e28aceef44ebc">TYPE_ARG</a>&nbsp;&nbsp;&nbsp;0x0010</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является аргументом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f0da0357cad8207ea4405182ee64fc59"></a><!-- doxytag: member="symbol.h::TYPE_CONST" ref="f0da0357cad8207ea4405182ee64fc59" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#f0da0357cad8207ea4405182ee64fc59">TYPE_CONST</a>&nbsp;&nbsp;&nbsp;0x0020</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является константой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d2ab457bbe915930d6174464808a33e2"></a><!-- doxytag: member="symbol.h::TYPE_LABEL" ref="d2ab457bbe915930d6174464808a33e2" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#d2ab457bbe915930d6174464808a33e2">TYPE_LABEL</a>&nbsp;&nbsp;&nbsp;0x0040</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ является меткой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="deecb08c1fbaa953cf1bd14773b57789"></a><!-- doxytag: member="symbol.h::TYPE_TEMP" ref="deecb08c1fbaa953cf1bd14773b57789" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#deecb08c1fbaa953cf1bd14773b57789">TYPE_TEMP</a>&nbsp;&nbsp;&nbsp;0x0080</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">символ временный <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="56e5f9a95536838408fcca8f22d541b4"></a><!-- doxytag: member="symbol.h::TYPE_INT" ref="56e5f9a95536838408fcca8f22d541b4" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#56e5f9a95536838408fcca8f22d541b4">TYPE_INT</a>&nbsp;&nbsp;&nbsp;0x0100</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тип символа целый <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="105c7addfad52601f4d079673eae7982"></a><!-- doxytag: member="symbol.h::TYPE_FLOAT" ref="105c7addfad52601f4d079673eae7982" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#105c7addfad52601f4d079673eae7982">TYPE_FLOAT</a>&nbsp;&nbsp;&nbsp;0x0200</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тип символа вещественный <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4e4e428e3a6a191834e3ff63bd301866"></a><!-- doxytag: member="symbol.h::TYPE_STRING" ref="4e4e428e3a6a191834e3ff63bd301866" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#4e4e428e3a6a191834e3ff63bd301866">TYPE_STRING</a>&nbsp;&nbsp;&nbsp;0x0400</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тип символа строка <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="56f27cface645d01a2daac4c4fd20174"></a><!-- doxytag: member="symbol.h::IS_DEFINED" ref="56f27cface645d01a2daac4c4fd20174" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#56f27cface645d01a2daac4c4fd20174">IS_DEFINED</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_DEFINED)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ определенным <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="59e2ee051ac6afa891b17a705396f6df"></a><!-- doxytag: member="symbol.h::IS_DECLARED" ref="59e2ee051ac6afa891b17a705396f6df" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#59e2ee051ac6afa891b17a705396f6df">IS_DECLARED</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_DECLARED)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ объявленным <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e81b87d351dea17ae0b4fdfd798cfca3"></a><!-- doxytag: member="symbol.h::IS_PROC" ref="e81b87d351dea17ae0b4fdfd798cfca3" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#e81b87d351dea17ae0b4fdfd798cfca3">IS_PROC</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_PROC)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ функцией <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f536cf6841e9d6e027d93a59af0dd628"></a><!-- doxytag: member="symbol.h::IS_VAR" ref="f536cf6841e9d6e027d93a59af0dd628" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#f536cf6841e9d6e027d93a59af0dd628">IS_VAR</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_VAR)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ переменной <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="13b7edd90f731c3b1718b23fc062b044"></a><!-- doxytag: member="symbol.h::IS_ARG" ref="13b7edd90f731c3b1718b23fc062b044" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#13b7edd90f731c3b1718b23fc062b044">IS_ARG</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_ARG)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ аргументом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b4ecad5c63685994c40689206d42e578"></a><!-- doxytag: member="symbol.h::IS_CONST" ref="b4ecad5c63685994c40689206d42e578" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#b4ecad5c63685994c40689206d42e578">IS_CONST</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_CONST)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ константой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="22dc0f3c2183a16280e21a25f9fddad6"></a><!-- doxytag: member="symbol.h::IS_LABEL" ref="22dc0f3c2183a16280e21a25f9fddad6" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#22dc0f3c2183a16280e21a25f9fddad6">IS_LABEL</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_LABEL)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ меткой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="86056da10ed9e1c7dd17c251937a9609"></a><!-- doxytag: member="symbol.h::IS_TEMP" ref="86056da10ed9e1c7dd17c251937a9609" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#86056da10ed9e1c7dd17c251937a9609">IS_TEMP</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_TEMP)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ временным символом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6711bb212976ae81ec74be2a08756445"></a><!-- doxytag: member="symbol.h::IS_STRING" ref="6711bb212976ae81ec74be2a08756445" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#6711bb212976ae81ec74be2a08756445">IS_STRING</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; TYPE_STRING)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, является ли символ строкой <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="0dfcec4dbe7f1ee89038423da916f223"></a><!-- doxytag: member="symbol.h::DECLARE_VAR" ref="0dfcec4dbe7f1ee89038423da916f223" args="(s, typ)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#0dfcec4dbe7f1ee89038423da916f223">DECLARE_VAR</a>(s, typ)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_VAR | typ;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает переменную объявленной с заданным типом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="1debb215687dca6c01c455aed8d14c84"></a><!-- doxytag: member="symbol.h::DECLARE_ARG" ref="1debb215687dca6c01c455aed8d14c84" args="(s, typ)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#1debb215687dca6c01c455aed8d14c84">DECLARE_ARG</a>(s, typ)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_ARG | typ;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает аргумент объявленной с заданным типом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="2a012dededb4c459ea6d36a5d66ea726"></a><!-- doxytag: member="symbol.h::DECLARE_CONST" ref="2a012dededb4c459ea6d36a5d66ea726" args="(s, typ)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#2a012dededb4c459ea6d36a5d66ea726">DECLARE_CONST</a>(s, typ)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_ARG | typ;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает константу объявленной с заданным типом <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="443770a4af47b61cd2640bd16f5df446"></a><!-- doxytag: member="symbol.h::DECLARE_LABEL" ref="443770a4af47b61cd2640bd16f5df446" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#443770a4af47b61cd2640bd16f5df446">DECLARE_LABEL</a>(s)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_LABEL;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает метку объявленной <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="19e47dc44975af4124918164e4dc1b19"></a><!-- doxytag: member="symbol.h::DECLARE_PROC" ref="19e47dc44975af4124918164e4dc1b19" args="(s, typ)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#19e47dc44975af4124918164e4dc1b19">DECLARE_PROC</a>(s, typ)&nbsp;&nbsp;&nbsp;s -&gt; type = TYPE_DECLARED | TYPE_PROC | typ;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает функцию объявленной с заданным типом возвращаемого значения <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d33e16105f05c32f0b31c4c7427afa2a"></a><!-- doxytag: member="symbol.h::DEFINE" ref="d33e16105f05c32f0b31c4c7427afa2a" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#d33e16105f05c32f0b31c4c7427afa2a">DEFINE</a>(s)&nbsp;&nbsp;&nbsp;s -&gt; type |= TYPE_DEFINED | TYPE_DECLARED;</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">делает символ определенным <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d950247edab03a6f3d2fcb2ae18b4d81"></a><!-- doxytag: member="symbol.h::TYPE_OF" ref="d950247edab03a6f3d2fcb2ae18b4d81" args="(s)" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#d950247edab03a6f3d2fcb2ae18b4d81">TYPE_OF</a>(s)&nbsp;&nbsp;&nbsp;(s -&gt; type &amp; (TYPE_FLOAT | TYPE_INT))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получает тип символа (целый/вещественный) <br></td></tr>
+<tr><td colspan="2"><br><h2>Определения типов</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b2ada88d002a02ab6fb3614d97aeec1c"></a><!-- doxytag: member="symbol.h::val_t" ref="b2ada88d002a02ab6fb3614d97aeec1c" args="" -->
+typedef <a class="el" href="uniontag__val.html">tag_val</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#b2ada88d002a02ab6fb3614d97aeec1c">val_t</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">объединение, служащее для хранения значения (может быть либо вещественным либо целым) <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="structtag__symbol.html">tag_symbol</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#37dbb17aaf16c6704c15ccc7850921b8">symbol</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">стуктура, описывающая символ в таблице символов  <a href="#37dbb17aaf16c6704c15ccc7850921b8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="structtag__cstack.html">tag_cstack</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#71157086b9dbfcf75cb50acf822da9c5">context_stack_member</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">структура, предназначенная для реализации вложенности функций  <a href="#71157086b9dbfcf75cb50acf822da9c5"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Функции</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#17db2465959d9609105527ff01f25469">install</a> (char *name, int type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">устанавливает символ  <a href="#17db2465959d9609105527ff01f25469"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#241372b843e249cd2da62a9e05042ea0">install_in_table</a> (<a class="el" href="structtag__symbol.html">symbol</a> **table, char *name, int type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">устанавливает символ в заданной таблице символов  <a href="#241372b843e249cd2da62a9e05042ea0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#5b025c47854206ad5d5d9804705d86f7">install_temp</a> (int type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">устанавливает временный символ  <a href="#5b025c47854206ad5d5d9804705d86f7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#7087f59331b04648787bf8dbe190c472">install_const</a> (int type, <a class="el" href="uniontag__val.html">val_t</a> val)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">устанавливает символ константы  <a href="#7087f59331b04648787bf8dbe190c472"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#a44157d0b73e07e80a536b1e3a96281e">install_label</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">устанавливает метку в таблицу символов  <a href="#a44157d0b73e07e80a536b1e3a96281e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#aa065bb904647fab32304399032d96c5">install_string</a> (char *str)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">устанавливает символ строки  <a href="#aa065bb904647fab32304399032d96c5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#20a00f4116cc64cc47229fd043dd3daf">lookup</a> (char *name)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ищет символ в таблице символов текущего контекста с заданным идентификатором  <a href="#20a00f4116cc64cc47229fd043dd3daf"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#a7446d59b8f7d3857f897e683f16892e">lookup_table</a> (<a class="el" href="structtag__symbol.html">symbol</a> *table, char *name)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ищет символ в заданной таблице символов с заданным идентификатором  <a href="#a7446d59b8f7d3857f897e683f16892e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#55fdd8dc8ff91443ed501d344e0248fa">lookup_table_type</a> (<a class="el" href="structtag__symbol.html">symbol</a> *table, char *name, int type_mask)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ищет символ в заданной таблице символов с заданным идентификатором и типом  <a href="#55fdd8dc8ff91443ed501d344e0248fa"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#55da57ff5035d4fea19b315887f439be">symbol_no</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb, char *name, int type_mask)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">возвращает номер символа  <a href="#55da57ff5035d4fea19b315887f439be"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#6e5aefdc34d212248dd81cf71a387293">lookup_arg</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb, int no)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ищет аргумент по номеру  <a href="#6e5aefdc34d212248dd81cf71a387293"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#4c75af308f1a132a98c98b2a9b73a24d">lookup_arg_by_name</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb, char *name)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ищет аргумент по имени  <a href="#4c75af308f1a132a98c98b2a9b73a24d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#09dc6a8c15b6a362c0b87c498fc774af">tail</a> (<a class="el" href="structtag__symbol.html">symbol</a> *table)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">возвращает хвост таблицы символов  <a href="#09dc6a8c15b6a362c0b87c498fc774af"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#498dfd736f4770f5df276e8391d22c49">delete_symbol</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">удаление символа  <a href="#498dfd736f4770f5df276e8391d22c49"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#d37937647ce7b47796e5da07aaac4a96">change_context</a> (<a class="el" href="structtag__symbol.html">symbol</a> **table)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">производит смену контекста  <a href="#d37937647ce7b47796e5da07aaac4a96"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#fd1b5670849b21ce69962dcd20e8bdb2">restore_context</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">восстанавливает контекст  <a href="#fd1b5670849b21ce69962dcd20e8bdb2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#9e448cd461ef3fa3bb6e6cb7ffcdcde8">search_context</a> (char *name)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ищет символ только в текущем контексте  <a href="#9e448cd461ef3fa3bb6e6cb7ffcdcde8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__cstack.html">context_stack_member</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#39c84968da7519a02adb488bb86eb8b1">get_global_context</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получить глобальный контекст  <a href="#39c84968da7519a02adb488bb86eb8b1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#a0455051426ef2b90a0826a4fa67585e">get_current_context_table</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получает таблицу символов текущего контекста  <a href="#a0455051426ef2b90a0826a4fa67585e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#4fddce301d19e11b03b4d05cffcc08d3">destroy_context_stack</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">уничтожает стек контекстов  <a href="#4fddce301d19e11b03b4d05cffcc08d3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#7598f7544d3c13604dbdb5ed6053b689">count_symbols</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb, int type_mask)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">подсчет количества символов в таблице  <a href="#7598f7544d3c13604dbdb5ed6053b689"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#ec3becac016827ebee3e77c05da4aa04">count_args</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">подсчет количества аргументов в таблице символов  <a href="#ec3becac016827ebee3e77c05da4aa04"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#323f000840e7f4083b5ba87590d634a6">get_typestr</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb, char *str)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получает строковое представление типа символа  <a href="#323f000840e7f4083b5ba87590d634a6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#1d1c03102c4d221c82f986258a000db4">delete_local</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">удаляет локальные символы  <a href="#1d1c03102c4d221c82f986258a000db4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#ce45b8abeb4b62138e263197c2251610">destroy_symtable</a> (<a class="el" href="structtag__symbol.html">symbol</a> **from)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">уничтожает таблицу символов  <a href="#ce45b8abeb4b62138e263197c2251610"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#3d835bed523442a472d25923e3a53c60">print_symtable</a> (<a class="el" href="structtag__symbol.html">symbol</a> *table)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">выводит таблицу символов на экран  <a href="#3d835bed523442a472d25923e3a53c60"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#1471d14214cb1a75b62a44c9b1da97b8">issymbol</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тестирует, является ли символом  <a href="#1471d14214cb1a75b62a44c9b1da97b8"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Переменные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="363b2553df3e9b4b723d668d59167daf"></a><!-- doxytag: member="symbol.h::global_table" ref="363b2553df3e9b4b723d668d59167daf" args="" -->
+<a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#363b2553df3e9b4b723d668d59167daf">global_table</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">таблица символов глобального контекста <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ee2c541c5b54957988d62ba28248e942"></a><!-- doxytag: member="symbol.h::symtable_end" ref="ee2c541c5b54957988d62ba28248e942" args="" -->
+<a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#ee2c541c5b54957988d62ba28248e942">symtable_end</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">хвост таблицы символов глобальнон контекста <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#6f2428b1396c25f5a071ddef6d396da8">next_temp_no</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">следующий номер временной переменной  <a href="#6f2428b1396c25f5a071ddef6d396da8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#4e8625853c8549421090c03e117a468b">next_label_no</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">следующий номер метки  <a href="#4e8625853c8549421090c03e117a468b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#e535a7669670479373ca5ddfcc94d857">next_string_no</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">следующий номер строки  <a href="#e535a7669670479373ca5ddfcc94d857"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__cstack.html">context_stack_member</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8h.html#392ba382feed0f22aa154170dd533bb5">context</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">стек контекстов  <a href="#392ba382feed0f22aa154170dd533bb5"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+<dl compact><dt><b>Автор:</b></dt><dd>Чучва Дмитрий </dd></dl>
+<dl compact><dt><b>Дата:</b></dt><dd>07.12.2006</dd></dl>
+Этот файл содержит описания макросов, типов, переменных, функций для работы с таблицей символов компилятора. Таблица символов - это структура, ассоциирующая идентификаторы переменных с их типами и другой семантической информацией, извлекаемой в процессе синтаксического и семантического анализа. <hr><h2>Макросы</h2>
+<a class="anchor" name="8fe83ac76edc595f6b98cd4a4127aed5"></a><!-- doxytag: member="symbol.h::ERROR" ref="8fe83ac76edc595f6b98cd4a4127aed5" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">#define ERROR&nbsp;&nbsp;&nbsp;&quot;error&quot;          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<dl compact><dt><b>См. также:</b></dt><dd><a class="el" href="main_8h.html#01fc23b949cca837ca10f29e8f457e9b">static_error</a> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="8fe83ac76edc595f6b98cd4a4127aed5"></a><!-- doxytag: member="symbol.h::ERROR" ref="8fe83ac76edc595f6b98cd4a4127aed5" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">#define ERROR&nbsp;&nbsp;&nbsp;&quot;error&quot;          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<dl compact><dt><b>См. также:</b></dt><dd><a class="el" href="main_8h.html#01fc23b949cca837ca10f29e8f457e9b">static_error</a> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="8fe83ac76edc595f6b98cd4a4127aed5"></a><!-- doxytag: member="symbol.h::ERROR" ref="8fe83ac76edc595f6b98cd4a4127aed5" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">#define ERROR&nbsp;&nbsp;&nbsp;&quot;error&quot;          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<dl compact><dt><b>См. также:</b></dt><dd><a class="el" href="main_8h.html#01fc23b949cca837ca10f29e8f457e9b">static_error</a> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="271d8f7f52be750e5c744a394ec71344"></a><!-- doxytag: member="symbol.h::WARN" ref="271d8f7f52be750e5c744a394ec71344" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">#define WARN&nbsp;&nbsp;&nbsp;&quot;warning&quot;          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<dl compact><dt><b>См. также:</b></dt><dd><a class="el" href="main_8h.html#01fc23b949cca837ca10f29e8f457e9b">static_error</a> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="271d8f7f52be750e5c744a394ec71344"></a><!-- doxytag: member="symbol.h::WARN" ref="271d8f7f52be750e5c744a394ec71344" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">#define WARN&nbsp;&nbsp;&nbsp;&quot;warning&quot;          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<dl compact><dt><b>См. также:</b></dt><dd><a class="el" href="main_8h.html#01fc23b949cca837ca10f29e8f457e9b">static_error</a> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="271d8f7f52be750e5c744a394ec71344"></a><!-- doxytag: member="symbol.h::WARN" ref="271d8f7f52be750e5c744a394ec71344" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">#define WARN&nbsp;&nbsp;&nbsp;&quot;warning&quot;          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<dl compact><dt><b>См. также:</b></dt><dd><a class="el" href="main_8h.html#01fc23b949cca837ca10f29e8f457e9b">static_error</a> </dd></dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Типы</h2>
+<a class="anchor" name="71157086b9dbfcf75cb50acf822da9c5"></a><!-- doxytag: member="symbol.h::context_stack_member" ref="71157086b9dbfcf75cb50acf822da9c5" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">typedef struct <a class="el" href="structtag__cstack.html">tag_cstack</a>  <a class="el" href="structtag__cstack.html">context_stack_member</a>          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Стуктура предназначена для реализации вложенности функций. На самом деле возможности ее используются не полностью, так как существуют всего два уровня вложенности: глобальный и локальный (функция), что следует из спецификации языка. Поэтому вложенные элементы называются контекстами: локальный и глобальный.     </td>
+  </tr>
+</table>
+<a class="anchor" name="37dbb17aaf16c6704c15ccc7850921b8"></a><!-- doxytag: member="symbol.h::symbol" ref="37dbb17aaf16c6704c15ccc7850921b8" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">typedef struct <a class="el" href="structtag__symbol.html">tag_symbol</a>  <a class="el" href="structtag__symbol.html">symbol</a>          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Центральная структура в компиляторе. Содержит всю информацию о переменных, функциях, константах, метках, временных переменных, и т.д.     </td>
+  </tr>
+</table>
+<hr><h2>Функции</h2>
+<a class="anchor" name="d37937647ce7b47796e5da07aaac4a96"></a><!-- doxytag: member="symbol.h::change_context" ref="d37937647ce7b47796e5da07aaac4a96" args="(symbol **table)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void change_context           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> **&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>table</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция создает новый контекст и ассоциирует ему заданную таблицу символов. Затем указатель на новый контекст кладется на вершину стека контекстов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица символов для нового контекста </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="ec3becac016827ebee3e77c05da4aa04"></a><!-- doxytag: member="symbol.h::count_args" ref="ec3becac016827ebee3e77c05da4aa04" args="(symbol *symb)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int count_args           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>symb</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит подсчет количества символов-аргументов в заданной таблице символов <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>таблица символов </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>количество аргуметов в таблице символов </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="7598f7544d3c13604dbdb5ed6053b689"></a><!-- doxytag: member="symbol.h::count_symbols" ref="7598f7544d3c13604dbdb5ed6053b689" args="(symbol *symb, int type_mask)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int count_symbols           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>symb</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>type_mask</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит вычисление количества символов в заданной таблице символов с заданным типом. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type_mask</em>&nbsp;</td><td>маска типа для символов </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>количество символов </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="1d1c03102c4d221c82f986258a000db4"></a><!-- doxytag: member="symbol.h::delete_local" ref="1d1c03102c4d221c82f986258a000db4" args="(symbol *symb)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void delete_local           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>symb</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит удаление заданного символа из талицы символов текущего контекста. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>символ для удаления </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="498dfd736f4770f5df276e8391d22c49"></a><!-- doxytag: member="symbol.h::delete_symbol" ref="498dfd736f4770f5df276e8391d22c49" args="(symbol *symb)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void delete_symbol           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>symb</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция удаляет символ из таблицы символов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>таблица символов </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="4fddce301d19e11b03b4d05cffcc08d3"></a><!-- doxytag: member="symbol.h::destroy_context_stack" ref="4fddce301d19e11b03b4d05cffcc08d3" args="()" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void destroy_context_stack           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит удаление стека контекстов из памяти, используется в ходе завершения приложения.     </td>
+  </tr>
+</table>
+<a class="anchor" name="ce45b8abeb4b62138e263197c2251610"></a><!-- doxytag: member="symbol.h::destroy_symtable" ref="ce45b8abeb4b62138e263197c2251610" args="(symbol **from)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void destroy_symtable           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> **&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>from</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит освобождение памяти, занятой под таблицу символов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>*from</em>&nbsp;</td><td>указатель на таблицу символов </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a0455051426ef2b90a0826a4fa67585e"></a><!-- doxytag: member="symbol.h::get_current_context_table" ref="a0455051426ef2b90a0826a4fa67585e" args="()" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* get_current_context_table           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возращает указатель на таблицу символов текущего контекста. <dl compact><dt><b>Возвращает:</b></dt><dd>указатель на таблицу символов текущего контекста </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="39c84968da7519a02adb488bb86eb8b1"></a><!-- doxytag: member="symbol.h::get_global_context" ref="39c84968da7519a02adb488bb86eb8b1" args="()" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__cstack.html">context_stack_member</a>* get_global_context           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возвращает указатель на глобальный контекст. <dl compact><dt><b>Возвращает:</b></dt><dd>указатель на глобальный контекст </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="323f000840e7f4083b5ba87590d634a6"></a><!-- doxytag: member="symbol.h::get_typestr" ref="323f000840e7f4083b5ba87590d634a6" args="(symbol *symb, char *str)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">char* get_typestr           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>symb</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>str</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция получает строковое представление типа символа. Используется при отладке. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>символ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>строка, в которой необходимо сформировать представление </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на переданную сформированную строку </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="17db2465959d9609105527ff01f25469"></a><!-- doxytag: member="symbol.h::install" ref="17db2465959d9609105527ff01f25469" args="(char *name, int type)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* install           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>type</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Фунцкия устанавливает символ с идентификатором name и типом type в таблицу символов текущего контекста. Эта функция вызывается лексическим сканером при определении токена, соответствующего идентификатору. Фукнция определяет таблицу символов текущего контекста и вызывает функцию install_in_table. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор символа </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>битовая маска типа символа </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на созданный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="7087f59331b04648787bf8dbe190c472"></a><!-- doxytag: member="symbol.h::install_const" ref="7087f59331b04648787bf8dbe190c472" args="(int type, val_t val)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* install_const           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname" nowrap> <em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="uniontag__val.html">val_t</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>val</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция устанавливает символ константы с типом type в таблицу символов глобального контекста. Имя символа для всех констант одинаковое и определяется макроопределением CONSTANTNAME. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>битовая маска типа символа </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>val</em>&nbsp;</td><td>значение константы </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на созданный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="241372b843e249cd2da62a9e05042ea0"></a><!-- doxytag: member="symbol.h::install_in_table" ref="241372b843e249cd2da62a9e05042ea0" args="(symbol **table, char *name, int type)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* install_in_table           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> **&nbsp;</td>
+          <td class="mdname" nowrap> <em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>type</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция устанавливает символ с идентификатором name и типом type в таблицу символов table. Эта функция является основой для семейства функций install* . <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор символа </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>битовая маска типа символа </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на созданный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a44157d0b73e07e80a536b1e3a96281e"></a><!-- doxytag: member="symbol.h::install_label" ref="a44157d0b73e07e80a536b1e3a96281e" args="()" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* install_label           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция устанавливает символ метки в таблицу символов глобального контекста. Имя символа формируется автоматически из префикса метки LABELPREFIX и номера следующей метки next_label_no. <dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на созданный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="aa065bb904647fab32304399032d96c5"></a><!-- doxytag: member="symbol.h::install_string" ref="aa065bb904647fab32304399032d96c5" args="(char *str)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* install_string           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">char *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>str</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция устанавливает символ строки в таблицу символов глобального контекста. Имя символа формируется автоматически из префикса строки STRINGRESOURCE и номера следующей строки next_string_no. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>строка для установки </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на созданный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="5b025c47854206ad5d5d9804705d86f7"></a><!-- doxytag: member="symbol.h::install_temp" ref="5b025c47854206ad5d5d9804705d86f7" args="(int type)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* install_temp           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>type</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция устанавливает временный символ с типом type в таблицу символов текущего контекста. Имя символа формируется автоматически из префикса временного символа TMPPREFIX и номера следующего временного символа next_temp_no. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>битовая маска типа символа </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на созданный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="1471d14214cb1a75b62a44c9b1da97b8"></a><!-- doxytag: member="symbol.h::issymbol" ref="1471d14214cb1a75b62a44c9b1da97b8" args="(symbol *symb)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int issymbol           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>symb</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция проверяет наличие символа в таблице символов текущего контекста. Аналог search_context. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>символ для проверки </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>1 - существует, 0 - такого символа нет. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="20a00f4116cc64cc47229fd043dd3daf"></a><!-- doxytag: member="symbol.h::lookup" ref="20a00f4116cc64cc47229fd043dd3daf" args="(char *name)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* lookup           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">char *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>name</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит поиск символа в таблице символов текущего контекста и возвращает указатель на него в случае успеха. Используется в лексическом сканере для определения необходимости установки нового символа либо использовании уже имеющегося. Если символ не найден в текущем контексте, производится поиск символа с таким именем в глобальном контексте. Если не найдено и в глобальном контексте, то возращает NULL. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор для поиска </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на найденный символ, либо NULL, если символ не найден </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="6e5aefdc34d212248dd81cf71a387293"></a><!-- doxytag: member="symbol.h::lookup_arg" ref="6e5aefdc34d212248dd81cf71a387293" args="(symbol *symb, int no)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* lookup_arg           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>symb</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>no</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возвращает указатель на символ-аргумент с номером no в заданной таблице символов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>no</em>&nbsp;</td><td>порядковый номер </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на найденный символ, либо NULL, если символа с таким номером не существует </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="4c75af308f1a132a98c98b2a9b73a24d"></a><!-- doxytag: member="symbol.h::lookup_arg_by_name" ref="4c75af308f1a132a98c98b2a9b73a24d" args="(symbol *symb, char *name)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* lookup_arg_by_name           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>symb</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>name</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возвращает указатель на символ-аргумент с заданным идентификатором name в заданной таблице символов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>имя аргумента </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на найденный аргумент, либо NULL, если символа с таким именем не существует </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a7446d59b8f7d3857f897e683f16892e"></a><!-- doxytag: member="symbol.h::lookup_table" ref="a7446d59b8f7d3857f897e683f16892e" args="(symbol *table, char *name)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* lookup_table           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>name</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит поиск символа с заданным идентификатором в заданной таблице символов и возвращает указатель на него в случае успеха. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица символов, где производится поиск </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор для поиска </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на найденный символ, либо NULL, если символ не найден </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="55fdd8dc8ff91443ed501d344e0248fa"></a><!-- doxytag: member="symbol.h::lookup_table_type" ref="55fdd8dc8ff91443ed501d344e0248fa" args="(symbol *table, char *name, int type_mask)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* lookup_table_type           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>type_mask</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит поиск символа с заданным идентификатором и типом в заданной таблице символов и возвращает указатель на него в случае успеха. Является основой для семейства функций lookup* . <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица символов, где производится поиск </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор для поиска </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type_mask</em>&nbsp;</td><td>битовая маска типа символа </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на найденный символ, либо NULL, если символ не найден </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="3d835bed523442a472d25923e3a53c60"></a><!-- doxytag: member="symbol.h::print_symtable" ref="3d835bed523442a472d25923e3a53c60" args="(symbol *table)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void print_symtable           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>table</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит вывод таблицы символов на экран. Используется при отладке. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица символов </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="fd1b5670849b21ce69962dcd20e8bdb2"></a><!-- doxytag: member="symbol.h::restore_context" ref="fd1b5670849b21ce69962dcd20e8bdb2" args="()" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void restore_context           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция восстанавливает предыдущий контекст путем выталкивания из стека контекстов верхнего элемента. Вызывается при выходе из функции, например.     </td>
+  </tr>
+</table>
+<a class="anchor" name="9e448cd461ef3fa3bb6e6cb7ffcdcde8"></a><!-- doxytag: member="symbol.h::search_context" ref="9e448cd461ef3fa3bb6e6cb7ffcdcde8" args="(char *name)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* search_context           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">char *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>name</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит поиск только в заданном контексте, в отличие от lookup. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор для поиска </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на найденный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="55da57ff5035d4fea19b315887f439be"></a><!-- doxytag: member="symbol.h::symbol_no" ref="55da57ff5035d4fea19b315887f439be" args="(symbol *symb, char *name, int type_mask)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int symbol_no           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>symb</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>type_mask</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возвращает порядковый номер символа (начиная с 0) в заданной таблице символов среди всех символов с типом, подходящим под маску типа type. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор символа </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type_mask</em>&nbsp;</td><td>битовая маска типа символов </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>номер символа среди всех символов с подходящим под маску типом </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="09dc6a8c15b6a362c0b87c498fc774af"></a><!-- doxytag: member="symbol.h::tail" ref="09dc6a8c15b6a362c0b87c498fc774af" args="(symbol *table)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* tail           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>table</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возвращает указатель на последний символ в заданной таблице символов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица символов </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на последний символ в таблице </dd></dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Переменные</h2>
+<a class="anchor" name="392ba382feed0f22aa154170dd533bb5"></a><!-- doxytag: member="symbol.h::context" ref="392ba382feed0f22aa154170dd533bb5" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__cstack.html">context_stack_member</a>* <a class="el" href="symbol_8h.html#392ba382feed0f22aa154170dd533bb5">context</a>          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+В силу того, что существует всего 2 контекста, максимальное количество элементов стека равно 2. Но, структура context_stack_member разрабатывалась с учетом того, что количество контекстов (вложенности процедур) неограничено. Поэтому, вы сможете легко добавить возможности описания переменных в блоках операторов (как в языке C++), например.     </td>
+  </tr>
+</table>
+<a class="anchor" name="4e8625853c8549421090c03e117a468b"></a><!-- doxytag: member="symbol.h::next_label_no" ref="4e8625853c8549421090c03e117a468b" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int <a class="el" href="symbol_8h.html#4e8625853c8549421090c03e117a468b">next_label_no</a>          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<dl compact><dt><b>См. также:</b></dt><dd><a class="el" href="symbol_8h.html#a44157d0b73e07e80a536b1e3a96281e">install_label</a> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="e535a7669670479373ca5ddfcc94d857"></a><!-- doxytag: member="symbol.h::next_string_no" ref="e535a7669670479373ca5ddfcc94d857" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int <a class="el" href="symbol_8h.html#e535a7669670479373ca5ddfcc94d857">next_string_no</a>          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<dl compact><dt><b>См. также:</b></dt><dd><a class="el" href="symbol_8h.html#aa065bb904647fab32304399032d96c5">install_string</a> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="6f2428b1396c25f5a071ddef6d396da8"></a><!-- doxytag: member="symbol.h::next_temp_no" ref="6f2428b1396c25f5a071ddef6d396da8" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int <a class="el" href="symbol_8h.html#6f2428b1396c25f5a071ddef6d396da8">next_temp_no</a>          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<dl compact><dt><b>См. также:</b></dt><dd><a class="el" href="symbol_8h.html#5b025c47854206ad5d5d9804705d86f7">install_temp</a> </dd></dl>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Документация по Компилятор MathC.. Последние изменения: Fri Dec 8 03:27:49 2006. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
+</body>
+</html>

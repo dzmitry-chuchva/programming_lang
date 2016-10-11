@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Windows-1251">
+<title>Компилятор MathC.: Файл code3.c</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.4.6 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+    <li><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li id="current"><a href="files.html"><span>Файлы</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Файлы</span></a></li>
+    <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+  </ul></div>
+<h1>Файл code3.c</h1>исходный текст функций генератора промежуточного кода <a href="#_details">Подробнее...</a>
+<p>
+<code>#include &quot;<a class="el" href="code3_8h-source.html">code3.h</a>&quot;</code><br>
+<code>#include &quot;stdio.h&quot;</code><br>
+<code>#include &quot;stdlib.h&quot;</code><br>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Функции</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__code.html">code</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="code3_8c.html#604da1da4b41c3cad69379388ffe6bd8">gen_code</a> (int op, <a class="el" href="structtag__symbol.html">symbol</a> *arg1, <a class="el" href="structtag__symbol.html">symbol</a> *arg2, <a class="el" href="structtag__symbol.html">symbol</a> *result, int type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">генерирует оператор  <a href="#604da1da4b41c3cad69379388ffe6bd8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__code.html">code</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="code3_8c.html#5d76f2a7e872a9d12a9ea4e59ac3667b">merge_code</a> (<a class="el" href="structtag__code.html">code</a> *code1, <a class="el" href="structtag__code.html">code</a> *code2)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">объединяет списки операторов  <a href="#5d76f2a7e872a9d12a9ea4e59ac3667b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__code.html">code</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="code3_8c.html#02c11dc9a7c5eaa5f5bcb61bd29f71ac">code_tail</a> (<a class="el" href="structtag__code.html">code</a> *c)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получить последний оператор в списке  <a href="#02c11dc9a7c5eaa5f5bcb61bd29f71ac"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="code3_8c.html#7cbb3331ae82fbe7073b40d2f749e6f7">destroy_code</a> (<a class="el" href="structtag__code.html">code</a> *c)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">уничтожает список операторов  <a href="#7cbb3331ae82fbe7073b40d2f749e6f7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="code3_8c.html#717025e0f1e41abd13a46c9f57034c92">codestr</a> (<a class="el" href="structtag__code.html">code</a> c, char *str)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получает строковое представление оператора  <a href="#717025e0f1e41abd13a46c9f57034c92"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="code3_8c.html#a9a81a7ce72f21187de6f1c2cd98b032">print_code_chain</a> (<a class="el" href="structtag__code.html">code</a> *chain)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">выводит список операторов на экран  <a href="#a9a81a7ce72f21187de6f1c2cd98b032"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Переменные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="41567b2cdbd2fed380b44b14f36e04a0"></a><!-- doxytag: member="code3.c::opstrs" ref="41567b2cdbd2fed380b44b14f36e04a0" args="[]" -->
+char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="code3_8c.html#41567b2cdbd2fed380b44b14f36e04a0">opstrs</a> []</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">строковые представления кодов операторов по их номерам <br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+<dl compact><dt><b>Автор:</b></dt><dd>Чучва Дмитрий </dd></dl>
+<dl compact><dt><b>Дата:</b></dt><dd>08.12.2006</dd></dl>
+Содержит реализацию функций генератора промежуточного кода. <hr><h2>Функции</h2>
+<a class="anchor" name="02c11dc9a7c5eaa5f5bcb61bd29f71ac"></a><!-- doxytag: member="code3.c::code_tail" ref="02c11dc9a7c5eaa5f5bcb61bd29f71ac" args="(code *c)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__code.html">code</a>* code_tail           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__code.html">code</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>c</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функия возвращает указатель на последний оператор в списке операторов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td>список операторов </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd></dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="717025e0f1e41abd13a46c9f57034c92"></a><!-- doxytag: member="code3.c::codestr" ref="717025e0f1e41abd13a46c9f57034c92" args="(code c, char *str)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">char* codestr           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__code.html">code</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>str</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция формирует строку для представления оператора на экране. Используется при отладке. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td>оператор </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>строка, куда формировать представление </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на сформированную строку </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="7cbb3331ae82fbe7073b40d2f749e6f7"></a><!-- doxytag: member="code3.c::destroy_code" ref="7cbb3331ae82fbe7073b40d2f749e6f7" args="(code *c)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void destroy_code           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__code.html">code</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>c</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит освобождение памяти, занятой под список операторов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td>список операторов </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="604da1da4b41c3cad69379388ffe6bd8"></a><!-- doxytag: member="code3.c::gen_code" ref="604da1da4b41c3cad69379388ffe6bd8" args="(int op, symbol *arg1, symbol *arg2, symbol *result, int type)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__code.html">code</a>* gen_code           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname" nowrap> <em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>arg1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>arg2</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>type</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция генерирует оператор в виде структуры code по переданным параметрам. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>op</em>&nbsp;</td><td>код операции </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>arg1</em>&nbsp;</td><td>символ первого аргумента </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>arg2</em>&nbsp;</td><td>символ второго аргумента </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>result</em>&nbsp;</td><td>символ результата </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>тип оператора </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на созданную стуктуру code </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="5d76f2a7e872a9d12a9ea4e59ac3667b"></a><!-- doxytag: member="code3.c::merge_code" ref="5d76f2a7e872a9d12a9ea4e59ac3667b" args="(code *code1, code *code2)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__code.html">code</a>* merge_code           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__code.html">code</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>code1</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__code.html">code</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>code2</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция добавляет к списку операторов code1 список операторов code2. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>code1</em>&nbsp;</td><td>список операторов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>code2</em>&nbsp;</td><td>список операторов </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>объединенный список операторов </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a9a81a7ce72f21187de6f1c2cd98b032"></a><!-- doxytag: member="code3.c::print_code_chain" ref="a9a81a7ce72f21187de6f1c2cd98b032" args="(code *chain)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void print_code_chain           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__code.html">code</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>chain</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция выводит список оператора на экран в виде набора строк. Используется при отладке. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>chain</em>&nbsp;</td><td>список операторов </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Документация по Компилятор MathC.. Последние изменения: Fri Dec 8 03:27:49 2006. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
+</body>
+</html>

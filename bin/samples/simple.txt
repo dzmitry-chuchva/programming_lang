@@ -1,0 +1,55 @@
+// file: simple.txt
+// descr: just a simple sample
+
+
+int fact(int n)
+{
+        if (n == 1)
+                return 1;
+        else
+                return fact(n - 1) * n;
+}
+
+int entry()
+{
+        int number = 0, i, summa = 0;
+        int calced_sum = 0;
+        int f = 0;
+
+        print "Enter number, to wich is needed to find sum: ";
+        read number;
+        i = 0;
+        do
+        {
+               i = i + 1; 
+               summa = summa + i;
+        }
+        while (i < number);
+        print "Iterating method: ";
+        print summa; println;
+        calced_sum = number * (number + 1) / 2;
+        print "Math method: "; 
+        print calced_sum; println;
+        if (summa != calced_sum)
+                print "=> Something wrong !";
+        else
+                print "=> All clear !";
+        println;
+        print "Enter n for calculating (n!)!: ";
+        read number;
+        if (!number)
+                print "n must be != 0";
+        else
+                if (number < 0)
+                        print "n must be > 0";
+                else
+                        if (number > 3)
+                                print "there will be a very big number in result... :)";
+                        else
+                        {
+                                f = fact(fact(number));
+                                print "n!! = ";
+                                print f;
+                        }
+       return f;
+}

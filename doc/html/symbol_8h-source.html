@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Windows-1251">
+<title>Компилятор MathC.: Исходный файл symbol.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.4.6 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+    <li><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li id="current"><a href="files.html"><span>Файлы</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Файлы</span></a></li>
+    <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+  </ul></div>
+<h1>symbol.h</h1><a href="symbol_8h.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00011"></a>00011 <span class="preprocessor">#ifndef __SYMBOL_H</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define __SYMBOL_H</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span>
+<a name="l00015"></a>00015 <span class="preprocessor">#ifndef NULL</span>
+<a name="l00016"></a><a class="code" href="symbol_8h.html#070d2ce7b6bb7e5c05602aa8c308d0c4">00016</a> <span class="preprocessor"></span><span class="preprocessor">#define NULL 0</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00018"></a>00018 <span class="preprocessor"></span>
+<a name="l00020"></a><a class="code" href="symbol_8h.html#29b8b0ee6d08ccbc3f76cd4de12349c0">00020</a> <span class="preprocessor">#define MAX_SYMBOL_NAME 255</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span>
+<a name="l00023"></a><a class="code" href="symbol_8h.html#d3d39216f4ddf09751e97009128f4e10">00023</a> <span class="preprocessor">#define INT_STR         "int"</span>
+<a name="l00024"></a>00024 <span class="preprocessor"></span>
+<a name="l00025"></a><a class="code" href="symbol_8h.html#c92265c01086588073e8e3e0659987f8">00025</a> <span class="preprocessor">#define FLOAT_STR       "float"</span>
+<a name="l00026"></a>00026 <span class="preprocessor"></span>
+<a name="l00027"></a><a class="code" href="symbol_8h.html#8b7c015d80ba87bc112adf52e6373488">00027</a> <span class="preprocessor">#define ENTRY_SYMBOL    "entry"</span>
+<a name="l00028"></a>00028 <span class="preprocessor"></span>
+<a name="l00030"></a>00030 
+<a name="l00032"></a><a class="code" href="symbol_8h.html#8fe83ac76edc595f6b98cd4a4127aed5">00032</a> <span class="preprocessor">#define ERROR   "error"</span>
+<a name="l00033"></a>00033 <span class="preprocessor"></span>
+<a name="l00034"></a>00034 
+<a name="l00036"></a><a class="code" href="symbol_8h.html#271d8f7f52be750e5c744a394ec71344">00036</a> <span class="preprocessor">#define WARN    "warning"</span>
+<a name="l00037"></a>00037 <span class="preprocessor"></span>
+<a name="l00039"></a><a class="code" href="symbol_8h.html#64cac228f3ce20387389ba0bcdf39853">00039</a> <span class="preprocessor">#define STRINGRESOURCE  "STR"</span>
+<a name="l00040"></a>00040 <span class="preprocessor"></span>
+<a name="l00041"></a><a class="code" href="symbol_8h.html#05057013170972c83c48ac96c9105fe6">00041</a> <span class="preprocessor">#define TEMPPREFIX      "TMP"</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span>
+<a name="l00043"></a><a class="code" href="symbol_8h.html#306034a4521c9f45ac7d90974be770ca">00043</a> <span class="preprocessor">#define CONSTANTSNAME   "0CONST"</span>
+<a name="l00044"></a>00044 <span class="preprocessor"></span>
+<a name="l00045"></a><a class="code" href="symbol_8h.html#c8d06ea56ed5e8a47173527802163035">00045</a> <span class="preprocessor">#define LABELPREFIX     "LB"</span>
+<a name="l00046"></a>00046 <span class="preprocessor"></span>
+<a name="l00047"></a>00047 
+<a name="l00048"></a><a class="code" href="symbol_8h.html#6dcd4150745a22ac919ba1d277718ca6">00048</a> <span class="preprocessor">#define TYPE_UNKNOWN    0x0000                     </span>
+<a name="l00049"></a>00049 <span class="preprocessor"></span>
+<a name="l00050"></a><a class="code" href="symbol_8h.html#4e38e7cab7c37f9e18829236dc1b8fbb">00050</a> <span class="preprocessor"></span><span class="preprocessor">#define TYPE_DECLARED   0x0001                    </span>
+<a name="l00051"></a><a class="code" href="symbol_8h.html#48e6937dfae6c81ea08cbc21a7e51e4f">00051</a> <span class="preprocessor">#define TYPE_DEFINED    0x0002                     </span>
+<a name="l00052"></a>00052 <span class="preprocessor"></span>
+<a name="l00053"></a><a class="code" href="symbol_8h.html#794c617be0f86bc66e539d5cf1f351dd">00053</a> <span class="preprocessor"></span><span class="preprocessor">#define TYPE_VAR        0x0004                  </span>
+<a name="l00054"></a><a class="code" href="symbol_8h.html#6dcb8fc96767508aa3255c89bd5ec031">00054</a> <span class="preprocessor">#define TYPE_PROC       0x0008                  </span>
+<a name="l00055"></a><a class="code" href="symbol_8h.html#8717844668a0a7f1d94e28aceef44ebc">00055</a> <span class="preprocessor">#define TYPE_ARG                0x0010                            </span>
+<a name="l00056"></a><a class="code" href="symbol_8h.html#f0da0357cad8207ea4405182ee64fc59">00056</a> <span class="preprocessor">#define TYPE_CONST              0x0020                          </span>
+<a name="l00057"></a><a class="code" href="symbol_8h.html#d2ab457bbe915930d6174464808a33e2">00057</a> <span class="preprocessor">#define TYPE_LABEL              0x0040                          </span>
+<a name="l00058"></a><a class="code" href="symbol_8h.html#deecb08c1fbaa953cf1bd14773b57789">00058</a> <span class="preprocessor">#define TYPE_TEMP               0x0080                           </span>
+<a name="l00059"></a>00059 <span class="preprocessor"></span>
+<a name="l00060"></a><a class="code" href="symbol_8h.html#56e5f9a95536838408fcca8f22d541b4">00060</a> <span class="preprocessor"></span><span class="preprocessor">#define TYPE_INT        0x0100                  </span>
+<a name="l00061"></a><a class="code" href="symbol_8h.html#105c7addfad52601f4d079673eae7982">00061</a> <span class="preprocessor">#define TYPE_FLOAT      0x0200                  </span>
+<a name="l00062"></a><a class="code" href="symbol_8h.html#4e4e428e3a6a191834e3ff63bd301866">00062</a> <span class="preprocessor">#define TYPE_STRING             0x0400                     </span>
+<a name="l00063"></a>00063 <span class="preprocessor"></span>
+<a name="l00064"></a>00064 <span class="preprocessor"></span>
+<a name="l00066"></a><a class="code" href="uniontag__val.html">00066</a> <span class="keyword">typedef</span> <span class="keyword">union </span><a class="code" href="uniontag__val.html">tag_val</a> {
+<a name="l00067"></a><a class="code" href="uniontag__val.html#766a7dd29941ee432c1871e1b09805dd">00067</a>         <span class="keywordtype">float</span> <a class="code" href="uniontag__val.html#766a7dd29941ee432c1871e1b09805dd">fval</a>;                                                        
+<a name="l00068"></a><a class="code" href="uniontag__val.html#d64625f2e991e5c0de834af3e5faef71">00068</a>         <span class="keywordtype">int</span> <a class="code" href="uniontag__val.html#d64625f2e991e5c0de834af3e5faef71">ival</a>;                                                          
+<a name="l00069"></a>00069 } <a class="code" href="uniontag__val.html">val_t</a>;
+<a name="l00070"></a>00070 
+<a name="l00072"></a>00072 
+<a name="l00076"></a><a class="code" href="structtag__symbol.html">00076</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structtag__symbol.html">tag_symbol</a> {
+<a name="l00077"></a><a class="code" href="structtag__symbol.html#8d9eae9e22ecc6d71288639260b57bfb">00077</a>         <span class="keywordtype">char</span> *<a class="code" href="structtag__symbol.html#8d9eae9e22ecc6d71288639260b57bfb">name</a>;                                             
+<a name="l00078"></a><a class="code" href="structtag__symbol.html#212ccfa93ad4d282cc7980a24fb6647d">00078</a>         <span class="keywordtype">int</span> <a class="code" href="structtag__symbol.html#212ccfa93ad4d282cc7980a24fb6647d">type</a>;                                               
+<a name="l00079"></a><a class="code" href="structtag__symbol.html#97560dd8654280da1637c861c27b23bc">00079</a>                 <span class="keyword">struct </span><a class="code" href="structtag__symbol.html">tag_symbol</a> *<a class="code" href="structtag__symbol.html#97560dd8654280da1637c861c27b23bc">table</a>;                         
+<a name="l00080"></a><a class="code" href="structtag__symbol.html#503a82000cca2c77d8678ca52db69bec">00080</a>         <span class="keyword">struct </span><a class="code" href="structtag__symbol.html">tag_symbol</a> *<a class="code" href="structtag__symbol.html#503a82000cca2c77d8678ca52db69bec">next</a>;                
+<a name="l00081"></a><a class="code" href="structtag__symbol.html#805fa093d632a27729b41cb1f96ee411">00081</a>                 <span class="keyword">struct </span><a class="code" href="structtag__symbol.html">tag_symbol</a> *<a class="code" href="structtag__symbol.html#805fa093d632a27729b41cb1f96ee411">prev</a>;                          
+<a name="l00082"></a>00082 } <a class="code" href="structtag__symbol.html">symbol</a>;
+<a name="l00083"></a>00083 
+<a name="l00085"></a>00085 
+<a name="l00091"></a><a class="code" href="structtag__cstack.html">00091</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structtag__cstack.html">tag_cstack</a> {
+<a name="l00092"></a><a class="code" href="structtag__cstack.html#c79967740646311bc395bc2676bb782d">00092</a>                 <a class="code" href="structtag__symbol.html">symbol</a> **<a class="code" href="structtag__cstack.html#c79967740646311bc395bc2676bb782d">table</a>;                                           
+<a name="l00093"></a><a class="code" href="structtag__cstack.html#e18f26fa4190e394db310c3eb3a9e995">00093</a>                 <span class="keyword">struct </span><a class="code" href="structtag__cstack.html">tag_cstack</a> *<a class="code" href="structtag__cstack.html#e18f26fa4190e394db310c3eb3a9e995">next</a>;                          
+<a name="l00094"></a>00094 } <a class="code" href="structtag__cstack.html">context_stack_member</a>;
+<a name="l00095"></a>00095 
+<a name="l00097"></a>00097 <span class="keyword">extern</span> <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#363b2553df3e9b4b723d668d59167daf">global_table</a>;
+<a name="l00099"></a>00099 <span class="keyword">extern</span> <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#ee2c541c5b54957988d62ba28248e942">symtable_end</a>;
+<a name="l00101"></a>00101 
+<a name="l00103"></a>00103 <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="symbol_8c.html#6f2428b1396c25f5a071ddef6d396da8">next_temp_no</a>;
+<a name="l00105"></a>00105 
+<a name="l00107"></a>00107 <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="symbol_8c.html#4e8625853c8549421090c03e117a468b">next_label_no</a>;
+<a name="l00109"></a>00109 
+<a name="l00111"></a>00111 <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="symbol_8c.html#e535a7669670479373ca5ddfcc94d857">next_string_no</a>;
+<a name="l00112"></a>00112 
+<a name="l00114"></a>00114 
+<a name="l00120"></a>00120 <span class="keyword">extern</span> <a class="code" href="structtag__cstack.html">context_stack_member</a> *<a class="code" href="symbol_8c.html#392ba382feed0f22aa154170dd533bb5">context</a>;
+<a name="l00121"></a>00121 
+<a name="l00123"></a>00123 
+<a name="l00131"></a>00131 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#17db2465959d9609105527ff01f25469">install</a>(<span class="keywordtype">char</span> *name, <span class="keywordtype">int</span> type);
+<a name="l00132"></a>00132 
+<a name="l00134"></a>00134 
+<a name="l00142"></a>00142 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#241372b843e249cd2da62a9e05042ea0">install_in_table</a>(<a class="code" href="structtag__symbol.html">symbol</a> **<a class="code" href="structtag__cstack.html#c79967740646311bc395bc2676bb782d">table</a>,<span class="keywordtype">char</span> *name,<span class="keywordtype">int</span> type);
+<a name="l00144"></a>00144 
+<a name="l00151"></a>00151 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#5b025c47854206ad5d5d9804705d86f7">install_temp</a>(<span class="keywordtype">int</span> type);
+<a name="l00153"></a>00153 
+<a name="l00160"></a>00160 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#7087f59331b04648787bf8dbe190c472">install_const</a>(<span class="keywordtype">int</span> type,<a class="code" href="uniontag__val.html">val_t</a> val);
+<a name="l00162"></a>00162 
+<a name="l00168"></a>00168 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#a44157d0b73e07e80a536b1e3a96281e">install_label</a>();
+<a name="l00170"></a>00170 
+<a name="l00177"></a>00177 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#aa065bb904647fab32304399032d96c5">install_string</a>(<span class="keywordtype">char</span> *str);
+<a name="l00179"></a>00179 
+<a name="l00188"></a>00188 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#20a00f4116cc64cc47229fd043dd3daf">lookup</a>(<span class="keywordtype">char</span> *name);
+<a name="l00190"></a>00190 
+<a name="l00197"></a>00197 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#a7446d59b8f7d3857f897e683f16892e">lookup_table</a>(<a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="structtag__cstack.html#c79967740646311bc395bc2676bb782d">table</a>,<span class="keywordtype">char</span> *name);
+<a name="l00199"></a>00199 
+<a name="l00207"></a>00207 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#55fdd8dc8ff91443ed501d344e0248fa">lookup_table_type</a>(<a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="structtag__cstack.html#c79967740646311bc395bc2676bb782d">table</a>,<span class="keywordtype">char</span> *name,<span class="keywordtype">int</span> type_mask);
+<a name="l00209"></a>00209 
+<a name="l00217"></a>00217 <span class="keywordtype">int</span> <a class="code" href="symbol_8c.html#55da57ff5035d4fea19b315887f439be">symbol_no</a>(<a class="code" href="structtag__symbol.html">symbol</a> *symb,<span class="keywordtype">char</span> *name,<span class="keywordtype">int</span> type_mask);
+<a name="l00219"></a>00219 
+<a name="l00225"></a>00225 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#6e5aefdc34d212248dd81cf71a387293">lookup_arg</a>(<a class="code" href="structtag__symbol.html">symbol</a> *symb, <span class="keywordtype">int</span> no);
+<a name="l00227"></a>00227 
+<a name="l00234"></a>00234 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#4c75af308f1a132a98c98b2a9b73a24d">lookup_arg_by_name</a>(<a class="code" href="structtag__symbol.html">symbol</a> *symb, <span class="keywordtype">char</span> *name);
+<a name="l00236"></a>00236 
+<a name="l00241"></a>00241 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#09dc6a8c15b6a362c0b87c498fc774af">tail</a>(<a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="structtag__cstack.html#c79967740646311bc395bc2676bb782d">table</a>);
+<a name="l00243"></a>00243 
+<a name="l00247"></a>00247 <span class="keywordtype">void</span> <a class="code" href="symbol_8c.html#498dfd736f4770f5df276e8391d22c49">delete_symbol</a>(<a class="code" href="structtag__symbol.html">symbol</a> *symb);
+<a name="l00248"></a>00248 
+<a name="l00250"></a>00250 
+<a name="l00255"></a>00255 <span class="keywordtype">void</span> <a class="code" href="symbol_8c.html#d37937647ce7b47796e5da07aaac4a96">change_context</a>(<a class="code" href="structtag__symbol.html">symbol</a> **<a class="code" href="structtag__cstack.html#c79967740646311bc395bc2676bb782d">table</a>);
+<a name="l00257"></a>00257 
+<a name="l00261"></a>00261 <span class="keywordtype">void</span> <a class="code" href="symbol_8c.html#fd1b5670849b21ce69962dcd20e8bdb2">restore_context</a>();
+<a name="l00263"></a>00263 
+<a name="l00268"></a>00268 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#9e448cd461ef3fa3bb6e6cb7ffcdcde8">search_context</a>(<span class="keywordtype">char</span> *name);
+<a name="l00270"></a>00270 
+<a name="l00274"></a>00274 <a class="code" href="structtag__cstack.html">context_stack_member</a> *<a class="code" href="symbol_8c.html#39c84968da7519a02adb488bb86eb8b1">get_global_context</a>();
+<a name="l00276"></a>00276 
+<a name="l00280"></a>00280 <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="symbol_8c.html#a0455051426ef2b90a0826a4fa67585e">get_current_context_table</a>();
+<a name="l00282"></a>00282 
+<a name="l00285"></a>00285 <span class="keywordtype">void</span> <a class="code" href="symbol_8c.html#4fddce301d19e11b03b4d05cffcc08d3">destroy_context_stack</a>();
+<a name="l00286"></a>00286 
+<a name="l00288"></a>00288 
+<a name="l00294"></a>00294 <span class="keywordtype">int</span> <a class="code" href="symbol_8c.html#7598f7544d3c13604dbdb5ed6053b689">count_symbols</a>(<a class="code" href="structtag__symbol.html">symbol</a> *symb, <span class="keywordtype">int</span> type_mask);
+<a name="l00296"></a>00296 
+<a name="l00301"></a>00301 <span class="keywordtype">int</span> <a class="code" href="symbol_8c.html#ec3becac016827ebee3e77c05da4aa04">count_args</a>(<a class="code" href="structtag__symbol.html">symbol</a> *symb);
+<a name="l00303"></a>00303 
+<a name="l00309"></a>00309 <span class="keywordtype">char</span> *<a class="code" href="symbol_8c.html#323f000840e7f4083b5ba87590d634a6">get_typestr</a>(<a class="code" href="structtag__symbol.html">symbol</a> *symb,<span class="keywordtype">char</span> *str);
+<a name="l00310"></a>00310 
+<a name="l00311"></a>00311 
+<a name="l00313"></a>00313 
+<a name="l00317"></a>00317 <span class="keywordtype">void</span> <a class="code" href="symbol_8c.html#1d1c03102c4d221c82f986258a000db4">delete_local</a>(<a class="code" href="structtag__symbol.html">symbol</a> *symb);
+<a name="l00319"></a>00319 
+<a name="l00323"></a>00323 <span class="keywordtype">void</span> <a class="code" href="symbol_8c.html#ce45b8abeb4b62138e263197c2251610">destroy_symtable</a>(<a class="code" href="structtag__symbol.html">symbol</a> **from);
+<a name="l00325"></a>00325 
+<a name="l00329"></a>00329 <span class="keywordtype">void</span> <a class="code" href="symbol_8c.html#3d835bed523442a472d25923e3a53c60">print_symtable</a>(<a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="structtag__cstack.html#c79967740646311bc395bc2676bb782d">table</a>);
+<a name="l00330"></a>00330 
+<a name="l00332"></a>00332 
+<a name="l00337"></a>00337 <span class="keywordtype">int</span> <a class="code" href="symbol_8c.html#1471d14214cb1a75b62a44c9b1da97b8">issymbol</a>(<a class="code" href="structtag__symbol.html">symbol</a> *symb);
+<a name="l00338"></a>00338 
+<a name="l00340"></a><a class="code" href="symbol_8h.html#56f27cface645d01a2daac4c4fd20174">00340</a> <span class="preprocessor">#define IS_DEFINED(s)                   (s -&gt; type &amp; TYPE_DEFINED)</span>
+<a name="l00341"></a>00341 <span class="preprocessor"></span>
+<a name="l00342"></a><a class="code" href="symbol_8h.html#59e2ee051ac6afa891b17a705396f6df">00342</a> <span class="preprocessor">#define IS_DECLARED(s)                  (s -&gt; type &amp; TYPE_DECLARED)</span>
+<a name="l00343"></a>00343 <span class="preprocessor"></span>
+<a name="l00345"></a><a class="code" href="symbol_8h.html#e81b87d351dea17ae0b4fdfd798cfca3">00345</a> <span class="preprocessor">#define IS_PROC(s)                              (s -&gt; type &amp; TYPE_PROC)</span>
+<a name="l00346"></a>00346 <span class="preprocessor"></span>
+<a name="l00347"></a><a class="code" href="symbol_8h.html#f536cf6841e9d6e027d93a59af0dd628">00347</a> <span class="preprocessor">#define IS_VAR(s)                               (s -&gt; type &amp; TYPE_VAR)</span>
+<a name="l00348"></a>00348 <span class="preprocessor"></span>
+<a name="l00349"></a><a class="code" href="symbol_8h.html#13b7edd90f731c3b1718b23fc062b044">00349</a> <span class="preprocessor">#define IS_ARG(s)                               (s -&gt; type &amp; TYPE_ARG)</span>
+<a name="l00350"></a>00350 <span class="preprocessor"></span>
+<a name="l00351"></a><a class="code" href="symbol_8h.html#b4ecad5c63685994c40689206d42e578">00351</a> <span class="preprocessor">#define IS_CONST(s)                             (s -&gt; type &amp; TYPE_CONST)</span>
+<a name="l00352"></a>00352 <span class="preprocessor"></span>
+<a name="l00353"></a><a class="code" href="symbol_8h.html#22dc0f3c2183a16280e21a25f9fddad6">00353</a> <span class="preprocessor">#define IS_LABEL(s)                             (s -&gt; type &amp; TYPE_LABEL)</span>
+<a name="l00354"></a>00354 <span class="preprocessor"></span>
+<a name="l00355"></a><a class="code" href="symbol_8h.html#86056da10ed9e1c7dd17c251937a9609">00355</a> <span class="preprocessor">#define IS_TEMP(s)                              (s -&gt; type &amp; TYPE_TEMP)</span>
+<a name="l00356"></a>00356 <span class="preprocessor"></span>
+<a name="l00357"></a><a class="code" href="symbol_8h.html#6711bb212976ae81ec74be2a08756445">00357</a> <span class="preprocessor">#define IS_STRING(s)                    (s -&gt; type &amp; TYPE_STRING)</span>
+<a name="l00358"></a>00358 <span class="preprocessor"></span>
+<a name="l00360"></a><a class="code" href="symbol_8h.html#0dfcec4dbe7f1ee89038423da916f223">00360</a> <span class="preprocessor">#define DECLARE_VAR(s,typ)              s -&gt; type = TYPE_DECLARED | TYPE_VAR | typ;</span>
+<a name="l00361"></a>00361 <span class="preprocessor"></span>
+<a name="l00362"></a><a class="code" href="symbol_8h.html#1debb215687dca6c01c455aed8d14c84">00362</a> <span class="preprocessor">#define DECLARE_ARG(s,typ)              s -&gt; type = TYPE_DECLARED | TYPE_ARG | typ;</span>
+<a name="l00363"></a>00363 <span class="preprocessor"></span>
+<a name="l00364"></a><a class="code" href="symbol_8h.html#2a012dededb4c459ea6d36a5d66ea726">00364</a> <span class="preprocessor">#define DECLARE_CONST(s,typ)    s -&gt; type = TYPE_DECLARED | TYPE_ARG | typ;</span>
+<a name="l00365"></a>00365 <span class="preprocessor"></span>
+<a name="l00366"></a><a class="code" href="symbol_8h.html#443770a4af47b61cd2640bd16f5df446">00366</a> <span class="preprocessor">#define DECLARE_LABEL(s)                s -&gt; type = TYPE_DECLARED | TYPE_LABEL;</span>
+<a name="l00367"></a>00367 <span class="preprocessor"></span>
+<a name="l00369"></a><a class="code" href="symbol_8h.html#19e47dc44975af4124918164e4dc1b19">00369</a> <span class="preprocessor">#define DECLARE_PROC(s,typ)             s -&gt; type = TYPE_DECLARED | TYPE_PROC | typ;</span>
+<a name="l00370"></a>00370 <span class="preprocessor"></span>
+<a name="l00372"></a><a class="code" href="symbol_8h.html#d33e16105f05c32f0b31c4c7427afa2a">00372</a> <span class="preprocessor">#define DEFINE(s)                               s -&gt; type |= TYPE_DEFINED | TYPE_DECLARED;</span>
+<a name="l00373"></a>00373 <span class="preprocessor"></span>
+<a name="l00375"></a><a class="code" href="symbol_8h.html#d950247edab03a6f3d2fcb2ae18b4d81">00375</a> <span class="preprocessor">#define TYPE_OF(s)                              (s -&gt; type &amp; (TYPE_FLOAT | TYPE_INT))</span>
+<a name="l00376"></a>00376 <span class="preprocessor"></span>
+<a name="l00377"></a>00377 <span class="preprocessor">#endif</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Документация по Компилятор MathC.. Последние изменения: Fri Dec 8 03:27:49 2006. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
+</body>
+</html>

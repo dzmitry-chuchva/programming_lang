@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Windows-1251">
+<title>Компилятор MathC.: Файл codetable.c</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.4.6 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+    <li><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li id="current"><a href="files.html"><span>Файлы</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Файлы</span></a></li>
+    <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+  </ul></div>
+<h1>Файл codetable.c</h1>исходный текст функций менеджера таблицы символов <a href="#_details">Подробнее...</a>
+<p>
+<code>#include &quot;<a class="el" href="codetable_8h-source.html">codetable.h</a>&quot;</code><br>
+<code>#include &quot;stdlib.h&quot;</code><br>
+<code>#include &quot;stdio.h&quot;</code><br>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Функции</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__ctable.html">ctable_entry</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="codetable_8c.html#ee639a177382e7f4a0c35637ef9c6e4c">add_code_entry</a> (<a class="el" href="structtag__symbol.html">symbol</a> *for_func, <a class="el" href="structtag__code.html">code</a> *func_code)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">добавляет в таблицу символов новую функцию  <a href="#ee639a177382e7f4a0c35637ef9c6e4c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__ctable.html">ctable_entry</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="codetable_8c.html#22c214b9d70811bb14a62d8ccd698b14">ctable_tail</a> (<a class="el" href="structtag__ctable.html">ctable_entry</a> *table)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">возвращает хвост таблицы символов  <a href="#22c214b9d70811bb14a62d8ccd698b14"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="codetable_8c.html#bb1a9016d06ef2ca0a22010215ab853e">clear_code_table</a> (<a class="el" href="structtag__ctable.html">ctable_entry</a> *table)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">уничтожает таблицу кода  <a href="#bb1a9016d06ef2ca0a22010215ab853e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="codetable_8c.html#a2abf2008fc2b24314f87436cdc81997">print_ctable</a> (<a class="el" href="structtag__ctable.html">ctable_entry</a> *table)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">выводит код функции из таблицы кода на экран  <a href="#a2abf2008fc2b24314f87436cdc81997"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="codetable_8c.html#d255fd5433e739b3f774cf116574e2b3">is_defined</a> (<a class="el" href="structtag__ctable.html">ctable_entry</a> *table, char *name)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">проверяет, содердится ли функция в таблице кода  <a href="#d255fd5433e739b3f774cf116574e2b3"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Переменные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d4c6a1a262cb1c8a1c17704e4250a28e"></a><!-- doxytag: member="codetable.c::code_table" ref="d4c6a1a262cb1c8a1c17704e4250a28e" args="" -->
+<a class="el" href="structtag__ctable.html">ctable_entry</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="codetable_8c.html#d4c6a1a262cb1c8a1c17704e4250a28e">code_table</a> = NULL</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">указатель на таблицу кода <br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+<dl compact><dt><b>Автор:</b></dt><dd>Чучва Дмитрий </dd></dl>
+<dl compact><dt><b>Дата:</b></dt><dd>08.12.2006</dd></dl>
+Содержит реализацию функций менеджера таблицы символов. <hr><h2>Функции</h2>
+<a class="anchor" name="ee639a177382e7f4a0c35637ef9c6e4c"></a><!-- doxytag: member="codetable.c::add_code_entry" ref="ee639a177382e7f4a0c35637ef9c6e4c" args="(symbol *for_func, code *func_code)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__ctable.html">ctable_entry</a>* add_code_entry           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>for_func</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="structtag__code.html">code</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>func_code</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция заносит в таблицу кода новую запись, содердащую имя функции и ее код. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>for_func</em>&nbsp;</td><td>символ функции </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>func_code</em>&nbsp;</td><td>сформированный код функции </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на добавленный элемент </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="bb1a9016d06ef2ca0a22010215ab853e"></a><!-- doxytag: member="codetable.c::clear_code_table" ref="bb1a9016d06ef2ca0a22010215ab853e" args="(ctable_entry *table)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void clear_code_table           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__ctable.html">ctable_entry</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>table</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит освобождение выделенной под таблицу кода памяти. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица кода </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="22c214b9d70811bb14a62d8ccd698b14"></a><!-- doxytag: member="codetable.c::ctable_tail" ref="22c214b9d70811bb14a62d8ccd698b14" args="(ctable_entry *table)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__ctable.html">ctable_entry</a>* ctable_tail           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__ctable.html">ctable_entry</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>table</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возвращает указатель на последний элемент таблицы кода. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>указатель на элемент таблицы кода </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на последний элемент таблицы кода </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="d255fd5433e739b3f774cf116574e2b3"></a><!-- doxytag: member="codetable.c::is_defined" ref="d255fd5433e739b3f774cf116574e2b3" args="(ctable_entry *table, char *name)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">char is_defined           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__ctable.html">ctable_entry</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>name</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит поиск по твблице кода функции с заданным именем. Если функция существует в таблице кода, значит она определена. В данном случае на тип TYPE_DEFINED не всегда можно полагаться, так как он используется также в других целях. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица кода </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>имя функции для поиска </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>0 - функция не определена, 1 - функция определена. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a2abf2008fc2b24314f87436cdc81997"></a><!-- doxytag: member="codetable.c::print_ctable" ref="a2abf2008fc2b24314f87436cdc81997" args="(ctable_entry *table)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void print_ctable           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__ctable.html">ctable_entry</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>table</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит вывод кода фукнции на экран. Используется при отладке. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>указатель на элемент таблицы кода </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Документация по Компилятор MathC.. Последние изменения: Fri Dec 8 03:27:49 2006. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
+</body>
+</html>

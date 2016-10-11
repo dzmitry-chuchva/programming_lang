@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Windows-1251">
+<title>Компилятор MathC.: Файл unistack.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.4.6 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+    <li><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li id="current"><a href="files.html"><span>Файлы</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Файлы</span></a></li>
+    <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+  </ul></div>
+<h1>Файл unistack.h</h1>описывает абстрактный стек <a href="#_details">Подробнее...</a>
+<p>
+
+<p>
+<a href="unistack_8h-source.html">См. исходные тексты.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Структуры данных</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag__stack__t.html">tag_stack_t</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">структура данных стека  <a href="structtag__stack__t.html#_details">Подробнее...</a><br></td></tr>
+<tr><td colspan="2"><br><h2>Определения типов</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ca574bfee7911880066f1b34aa70d514"></a><!-- doxytag: member="unistack.h::stack_t" ref="ca574bfee7911880066f1b34aa70d514" args="" -->
+typedef <a class="el" href="structtag__stack__t.html">tag_stack_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistack_8h.html#ca574bfee7911880066f1b34aa70d514">stack_t</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">структура данных стека <br></td></tr>
+<tr><td colspan="2"><br><h2>Функции</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistack_8h.html#0c6acd654f10f269d9b41df90437f8de">create_stack</a> (void *data, int el_size)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">создает стек  <a href="#0c6acd654f10f269d9b41df90437f8de"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistack_8h.html#4dfe88e02fd7cfd89dc8d35d40749d5a">destroy_stack</a> (<a class="el" href="structtag__stack__t.html">stack_t</a> *st)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">уничтожает стек  <a href="#4dfe88e02fd7cfd89dc8d35d40749d5a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistack_8h.html#172b6dde1fe67f8b0bb289f35d55c147">push</a> (<a class="el" href="structtag__stack__t.html">stack_t</a> *st, void *data, int el_size)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">кладет новый элемент на вершину стека  <a href="#172b6dde1fe67f8b0bb289f35d55c147"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistack_8h.html#3848e74f67fd1cb9fbf6b88bc154a41d">top</a> (<a class="el" href="structtag__stack__t.html">stack_t</a> *st)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">возвращает данные вершины стека  <a href="#3848e74f67fd1cb9fbf6b88bc154a41d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistack_8h.html#8d28cd88ee37be03e1c7be14df2829a4">pop</a> (<a class="el" href="structtag__stack__t.html">stack_t</a> *st)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">выталкивает данные из стека  <a href="#8d28cd88ee37be03e1c7be14df2829a4"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+<dl compact><dt><b>Автор:</b></dt><dd>Чучва Дмитрий </dd></dl>
+<dl compact><dt><b>Дата:</b></dt><dd>08.12.2006</dd></dl>
+Файл содержит объявления функций, переменных, типов, реализующих абстрактный стек, который может содержать элементы любого типа. <hr><h2>Функции</h2>
+<a class="anchor" name="0c6acd654f10f269d9b41df90437f8de"></a><!-- doxytag: member="unistack.h::create_stack" ref="0c6acd654f10f269d9b41df90437f8de" args="(void *data, int el_size)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a>* create_stack           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">void *&nbsp;</td>
+          <td class="mdname" nowrap> <em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>el_size</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция выделяет память на первый элемент стека, заполняет его переданными значениями, устанавливает размер элемента стека. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>информация нового элемента стека </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>el_size</em>&nbsp;</td><td>размер данных нового и последующих элементов стека </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на созданный стек из одного элемента </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="4dfe88e02fd7cfd89dc8d35d40749d5a"></a><!-- doxytag: member="unistack.h::destroy_stack" ref="4dfe88e02fd7cfd89dc8d35d40749d5a" args="(stack_t *st)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a>* destroy_stack           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>st</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция освобождает память, выделенную под стек. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>st</em>&nbsp;</td><td>указатель на вершину стека </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>возвращает NULL </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="8d28cd88ee37be03e1c7be14df2829a4"></a><!-- doxytag: member="unistack.h::pop" ref="8d28cd88ee37be03e1c7be14df2829a4" args="(stack_t *st)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a>* pop           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>st</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит выталкивание текущего элемента на вершине стека и его уничтожение. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>st</em>&nbsp;</td><td>вершина стека </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>новая вершина стека </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="172b6dde1fe67f8b0bb289f35d55c147"></a><!-- doxytag: member="unistack.h::push" ref="172b6dde1fe67f8b0bb289f35d55c147" args="(stack_t *st, void *data, int el_size)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a>* push           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>st</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>void *&nbsp;</td>
+          <td class="mdname" nowrap> <em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>el_size</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция создает новый элемент стека по переданными параметрам и кладет его на вершину стека. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>st</em>&nbsp;</td><td>указатель на вершину стека </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>данные нового элемента </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>el_size</em>&nbsp;</td><td>размер данных нового элемента </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>возвращает новый указатель на вершину стека </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="3848e74f67fd1cb9fbf6b88bc154a41d"></a><!-- doxytag: member="unistack.h::top" ref="3848e74f67fd1cb9fbf6b88bc154a41d" args="(stack_t *st)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void* top           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__stack__t.html">stack_t</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>st</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возвращает указатель на данные, записанные в текщей вершине стека. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>st</em>&nbsp;</td><td>вершина стека </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на данные </dd></dl>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Документация по Компилятор MathC.. Последние изменения: Fri Dec 8 03:27:49 2006. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
+</body>
+</html>

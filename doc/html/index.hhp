@@ -1,0 +1,58 @@
+[OPTIONS]
+Compiled file=..\mathcdoc.chm
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x419 Russian
+Title=Компилятор MathC.
+
+[WINDOWS]
+main="Компилятор MathC.","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x387e,,,,,,,,0
+
+[FILES]
+index.html
+files.html
+asm__code_8h-source.html
+code3_8h-source.html
+codetable_8h-source.html
+main_8h-source.html
+symbol_8h-source.html
+unistack_8h-source.html
+asm__code_8c.html
+asm__code_8h.html
+code3_8c.html
+code3_8h.html
+codetable_8c.html
+codetable_8h.html
+lex_8l.html
+main_8c.html
+main_8h.html
+parse_8y.html
+symbol_8c.html
+symbol_8h.html
+unistack_8c.html
+unistack_8h.html
+annotated.html
+hierarchy.html
+functions.html
+functions_vars.html
+structtag__code.html
+structtag__cstack.html
+structtag__ctable.html
+structtag__fci__t.html
+structtag__stack__t.html
+structtag__symbol.html
+uniontag__val.html
+unionvalptr__t.html
+globals.html
+globals_func.html
+globals_vars.html
+globals_type.html
+globals_defs.html
+tabs.css
+tab_b.gif
+tab_l.gif
+tab_r.gif

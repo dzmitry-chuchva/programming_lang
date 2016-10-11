@@ -1,0 +1,1267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Windows-1251">
+<title>Компилятор MathC.: Файл symbol.c</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.4.6 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+    <li><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li id="current"><a href="files.html"><span>Файлы</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Файлы</span></a></li>
+    <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+  </ul></div>
+<h1>Файл symbol.c</h1>исходный текст функций менеджера таблицы символов <a href="#_details">Подробнее...</a>
+<p>
+<code>#include &quot;<a class="el" href="symbol_8h-source.html">symbol.h</a>&quot;</code><br>
+<code>#include &quot;stdio.h&quot;</code><br>
+<code>#include &quot;stdlib.h&quot;</code><br>
+<code>#include &quot;string.h&quot;</code><br>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Функции</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#20a00f4116cc64cc47229fd043dd3daf">lookup</a> (char *name)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ищет символ в таблице символов текущего контекста с заданным идентификатором  <a href="#20a00f4116cc64cc47229fd043dd3daf"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#1471d14214cb1a75b62a44c9b1da97b8">issymbol</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">тестирует, является ли символом  <a href="#1471d14214cb1a75b62a44c9b1da97b8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#17db2465959d9609105527ff01f25469">install</a> (char *name, int type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">устанавливает символ  <a href="#17db2465959d9609105527ff01f25469"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#ce45b8abeb4b62138e263197c2251610">destroy_symtable</a> (<a class="el" href="structtag__symbol.html">symbol</a> **from)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">уничтожает таблицу символов  <a href="#ce45b8abeb4b62138e263197c2251610"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#3d835bed523442a472d25923e3a53c60">print_symtable</a> (<a class="el" href="structtag__symbol.html">symbol</a> *table)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">выводит таблицу символов на экран  <a href="#3d835bed523442a472d25923e3a53c60"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#ec3becac016827ebee3e77c05da4aa04">count_args</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">подсчет количества аргументов в таблице символов  <a href="#ec3becac016827ebee3e77c05da4aa04"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#7598f7544d3c13604dbdb5ed6053b689">count_symbols</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb, int type_mask)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">подсчет количества символов в таблице  <a href="#7598f7544d3c13604dbdb5ed6053b689"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#6e5aefdc34d212248dd81cf71a387293">lookup_arg</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb, int no)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ищет аргумент по номеру  <a href="#6e5aefdc34d212248dd81cf71a387293"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#4c75af308f1a132a98c98b2a9b73a24d">lookup_arg_by_name</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb, char *name)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ищет аргумент по имени  <a href="#4c75af308f1a132a98c98b2a9b73a24d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#09dc6a8c15b6a362c0b87c498fc774af">tail</a> (<a class="el" href="structtag__symbol.html">symbol</a> *table)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">возвращает хвост таблицы символов  <a href="#09dc6a8c15b6a362c0b87c498fc774af"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#5b025c47854206ad5d5d9804705d86f7">install_temp</a> (int type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">устанавливает временный символ  <a href="#5b025c47854206ad5d5d9804705d86f7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#323f000840e7f4083b5ba87590d634a6">get_typestr</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb, char *str)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получает строковое представление типа символа  <a href="#323f000840e7f4083b5ba87590d634a6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#498dfd736f4770f5df276e8391d22c49">delete_symbol</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">удаление символа  <a href="#498dfd736f4770f5df276e8391d22c49"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#1d1c03102c4d221c82f986258a000db4">delete_local</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">удаляет локальные символы  <a href="#1d1c03102c4d221c82f986258a000db4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#d37937647ce7b47796e5da07aaac4a96">change_context</a> (<a class="el" href="structtag__symbol.html">symbol</a> **table)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">производит смену контекста  <a href="#d37937647ce7b47796e5da07aaac4a96"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#fd1b5670849b21ce69962dcd20e8bdb2">restore_context</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">восстанавливает контекст  <a href="#fd1b5670849b21ce69962dcd20e8bdb2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__cstack.html">context_stack_member</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#39c84968da7519a02adb488bb86eb8b1">get_global_context</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получить глобальный контекст  <a href="#39c84968da7519a02adb488bb86eb8b1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#4fddce301d19e11b03b4d05cffcc08d3">destroy_context_stack</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">уничтожает стек контекстов  <a href="#4fddce301d19e11b03b4d05cffcc08d3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#9e448cd461ef3fa3bb6e6cb7ffcdcde8">search_context</a> (char *name)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ищет символ только в текущем контексте  <a href="#9e448cd461ef3fa3bb6e6cb7ffcdcde8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#7087f59331b04648787bf8dbe190c472">install_const</a> (int type, <a class="el" href="uniontag__val.html">val_t</a> val)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">устанавливает символ константы  <a href="#7087f59331b04648787bf8dbe190c472"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#a44157d0b73e07e80a536b1e3a96281e">install_label</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">устанавливает метку в таблицу символов  <a href="#a44157d0b73e07e80a536b1e3a96281e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#55da57ff5035d4fea19b315887f439be">symbol_no</a> (<a class="el" href="structtag__symbol.html">symbol</a> *symb, char *name, int type_mask)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">возвращает номер символа  <a href="#55da57ff5035d4fea19b315887f439be"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#a7446d59b8f7d3857f897e683f16892e">lookup_table</a> (<a class="el" href="structtag__symbol.html">symbol</a> *table, char *name)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ищет символ в заданной таблице символов с заданным идентификатором  <a href="#a7446d59b8f7d3857f897e683f16892e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#55fdd8dc8ff91443ed501d344e0248fa">lookup_table_type</a> (<a class="el" href="structtag__symbol.html">symbol</a> *table, char *name, int type_mask)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ищет символ в заданной таблице символов с заданным идентификатором и типом  <a href="#55fdd8dc8ff91443ed501d344e0248fa"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#aa065bb904647fab32304399032d96c5">install_string</a> (char *str)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">устанавливает символ строки  <a href="#aa065bb904647fab32304399032d96c5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#a0455051426ef2b90a0826a4fa67585e">get_current_context_table</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получает таблицу символов текущего контекста  <a href="#a0455051426ef2b90a0826a4fa67585e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#241372b843e249cd2da62a9e05042ea0">install_in_table</a> (<a class="el" href="structtag__symbol.html">symbol</a> **table, char *name, int type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">устанавливает символ в заданной таблице символов  <a href="#241372b843e249cd2da62a9e05042ea0"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Переменные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="363b2553df3e9b4b723d668d59167daf"></a><!-- doxytag: member="symbol.c::global_table" ref="363b2553df3e9b4b723d668d59167daf" args="" -->
+<a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#363b2553df3e9b4b723d668d59167daf">global_table</a> = NULL</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">таблица символов глобального контекста <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#6f2428b1396c25f5a071ddef6d396da8">next_temp_no</a> = 0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">следующий номер временной переменной  <a href="#6f2428b1396c25f5a071ddef6d396da8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#4e8625853c8549421090c03e117a468b">next_label_no</a> = 0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">следующий номер метки  <a href="#4e8625853c8549421090c03e117a468b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#e535a7669670479373ca5ddfcc94d857">next_string_no</a> = 0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">следующий номер строки  <a href="#e535a7669670479373ca5ddfcc94d857"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__cstack.html">context_stack_member</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#06391363dc5f1eaeda5f094ba54f36b2">start_context</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">глобальный статический контекст  <a href="#06391363dc5f1eaeda5f094ba54f36b2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="structtag__cstack.html">context_stack_member</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#392ba382feed0f22aa154170dd533bb5">context</a> = &amp;<a class="el" href="symbol_8c.html#06391363dc5f1eaeda5f094ba54f36b2">start_context</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">стек контекстов  <a href="#392ba382feed0f22aa154170dd533bb5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ee2c541c5b54957988d62ba28248e942"></a><!-- doxytag: member="symbol.c::symtable_end" ref="ee2c541c5b54957988d62ba28248e942" args="" -->
+<a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="symbol_8c.html#ee2c541c5b54957988d62ba28248e942">symtable_end</a> = NULL</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">хвост таблицы символов глобальнон контекста <br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+<dl compact><dt><b>Автор:</b></dt><dd>Чучва Дмитрий </dd></dl>
+<dl compact><dt><b>Дата:</b></dt><dd>08.12.2006</dd></dl>
+Содержит реализацию функций менеджера таблицы символов. <hr><h2>Функции</h2>
+<a class="anchor" name="d37937647ce7b47796e5da07aaac4a96"></a><!-- doxytag: member="symbol.c::change_context" ref="d37937647ce7b47796e5da07aaac4a96" args="(symbol **table)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void change_context           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> **&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>table</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция создает новый контекст и ассоциирует ему заданную таблицу символов. Затем указатель на новый контекст кладется на вершину стека контекстов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица символов для нового контекста </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="ec3becac016827ebee3e77c05da4aa04"></a><!-- doxytag: member="symbol.c::count_args" ref="ec3becac016827ebee3e77c05da4aa04" args="(symbol *symb)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int count_args           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>symb</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит подсчет количества символов-аргументов в заданной таблице символов <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>таблица символов </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>количество аргуметов в таблице символов </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="7598f7544d3c13604dbdb5ed6053b689"></a><!-- doxytag: member="symbol.c::count_symbols" ref="7598f7544d3c13604dbdb5ed6053b689" args="(symbol *symb, int type_mask)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int count_symbols           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>symb</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>type_mask</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит вычисление количества символов в заданной таблице символов с заданным типом. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type_mask</em>&nbsp;</td><td>маска типа для символов </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>количество символов </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="1d1c03102c4d221c82f986258a000db4"></a><!-- doxytag: member="symbol.c::delete_local" ref="1d1c03102c4d221c82f986258a000db4" args="(symbol *symb)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void delete_local           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>symb</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит удаление заданного символа из талицы символов текущего контекста. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>символ для удаления </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="498dfd736f4770f5df276e8391d22c49"></a><!-- doxytag: member="symbol.c::delete_symbol" ref="498dfd736f4770f5df276e8391d22c49" args="(symbol *symb)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void delete_symbol           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>symb</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция удаляет символ из таблицы символов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>таблица символов </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="4fddce301d19e11b03b4d05cffcc08d3"></a><!-- doxytag: member="symbol.c::destroy_context_stack" ref="4fddce301d19e11b03b4d05cffcc08d3" args="()" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void destroy_context_stack           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит удаление стека контекстов из памяти, используется в ходе завершения приложения.     </td>
+  </tr>
+</table>
+<a class="anchor" name="ce45b8abeb4b62138e263197c2251610"></a><!-- doxytag: member="symbol.c::destroy_symtable" ref="ce45b8abeb4b62138e263197c2251610" args="(symbol **from)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void destroy_symtable           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> **&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>from</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит освобождение памяти, занятой под таблицу символов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>*from</em>&nbsp;</td><td>указатель на таблицу символов </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a0455051426ef2b90a0826a4fa67585e"></a><!-- doxytag: member="symbol.c::get_current_context_table" ref="a0455051426ef2b90a0826a4fa67585e" args="()" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* get_current_context_table           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возращает указатель на таблицу символов текущего контекста. <dl compact><dt><b>Возвращает:</b></dt><dd>указатель на таблицу символов текущего контекста </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="39c84968da7519a02adb488bb86eb8b1"></a><!-- doxytag: member="symbol.c::get_global_context" ref="39c84968da7519a02adb488bb86eb8b1" args="()" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__cstack.html">context_stack_member</a>* get_global_context           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возвращает указатель на глобальный контекст. <dl compact><dt><b>Возвращает:</b></dt><dd>указатель на глобальный контекст </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="323f000840e7f4083b5ba87590d634a6"></a><!-- doxytag: member="symbol.c::get_typestr" ref="323f000840e7f4083b5ba87590d634a6" args="(symbol *symb, char *str)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">char* get_typestr           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>symb</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>str</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция получает строковое представление типа символа. Используется при отладке. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>символ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>строка, в которой необходимо сформировать представление </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на переданную сформированную строку </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="17db2465959d9609105527ff01f25469"></a><!-- doxytag: member="symbol.c::install" ref="17db2465959d9609105527ff01f25469" args="(char *name, int type)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* install           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>type</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Фунцкия устанавливает символ с идентификатором name и типом type в таблицу символов текущего контекста. Эта функция вызывается лексическим сканером при определении токена, соответствующего идентификатору. Фукнция определяет таблицу символов текущего контекста и вызывает функцию install_in_table. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор символа </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>битовая маска типа символа </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на созданный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="7087f59331b04648787bf8dbe190c472"></a><!-- doxytag: member="symbol.c::install_const" ref="7087f59331b04648787bf8dbe190c472" args="(int type, val_t val)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* install_const           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname" nowrap> <em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap><a class="el" href="uniontag__val.html">val_t</a>&nbsp;</td>
+          <td class="mdname" nowrap> <em>val</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция устанавливает символ константы с типом type в таблицу символов глобального контекста. Имя символа для всех констант одинаковое и определяется макроопределением CONSTANTNAME. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>битовая маска типа символа </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>val</em>&nbsp;</td><td>значение константы </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на созданный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="241372b843e249cd2da62a9e05042ea0"></a><!-- doxytag: member="symbol.c::install_in_table" ref="241372b843e249cd2da62a9e05042ea0" args="(symbol **table, char *name, int type)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* install_in_table           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> **&nbsp;</td>
+          <td class="mdname" nowrap> <em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>type</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция устанавливает символ с идентификатором name и типом type в таблицу символов table. Эта функция является основой для семейства функций install* . <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор символа </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>битовая маска типа символа </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на созданный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a44157d0b73e07e80a536b1e3a96281e"></a><!-- doxytag: member="symbol.c::install_label" ref="a44157d0b73e07e80a536b1e3a96281e" args="()" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* install_label           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция устанавливает символ метки в таблицу символов глобального контекста. Имя символа формируется автоматически из префикса метки LABELPREFIX и номера следующей метки next_label_no. <dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на созданный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="aa065bb904647fab32304399032d96c5"></a><!-- doxytag: member="symbol.c::install_string" ref="aa065bb904647fab32304399032d96c5" args="(char *str)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* install_string           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">char *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>str</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция устанавливает символ строки в таблицу символов глобального контекста. Имя символа формируется автоматически из префикса строки STRINGRESOURCE и номера следующей строки next_string_no. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>строка для установки </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на созданный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="5b025c47854206ad5d5d9804705d86f7"></a><!-- doxytag: member="symbol.c::install_temp" ref="5b025c47854206ad5d5d9804705d86f7" args="(int type)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* install_temp           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">int&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>type</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция устанавливает временный символ с типом type в таблицу символов текущего контекста. Имя символа формируется автоматически из префикса временного символа TMPPREFIX и номера следующего временного символа next_temp_no. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>битовая маска типа символа </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на созданный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="1471d14214cb1a75b62a44c9b1da97b8"></a><!-- doxytag: member="symbol.c::issymbol" ref="1471d14214cb1a75b62a44c9b1da97b8" args="(symbol *symb)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int issymbol           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>symb</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция проверяет наличие символа в таблице символов текущего контекста. Аналог search_context. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>символ для проверки </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>1 - существует, 0 - такого символа нет. </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="20a00f4116cc64cc47229fd043dd3daf"></a><!-- doxytag: member="symbol.c::lookup" ref="20a00f4116cc64cc47229fd043dd3daf" args="(char *name)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* lookup           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">char *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>name</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит поиск символа в таблице символов текущего контекста и возвращает указатель на него в случае успеха. Используется в лексическом сканере для определения необходимости установки нового символа либо использовании уже имеющегося. Если символ не найден в текущем контексте, производится поиск символа с таким именем в глобальном контексте. Если не найдено и в глобальном контексте, то возращает NULL. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор для поиска </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на найденный символ, либо NULL, если символ не найден </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="6e5aefdc34d212248dd81cf71a387293"></a><!-- doxytag: member="symbol.c::lookup_arg" ref="6e5aefdc34d212248dd81cf71a387293" args="(symbol *symb, int no)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* lookup_arg           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>symb</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>no</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возвращает указатель на символ-аргумент с номером no в заданной таблице символов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>no</em>&nbsp;</td><td>порядковый номер </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на найденный символ, либо NULL, если символа с таким номером не существует </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="4c75af308f1a132a98c98b2a9b73a24d"></a><!-- doxytag: member="symbol.c::lookup_arg_by_name" ref="4c75af308f1a132a98c98b2a9b73a24d" args="(symbol *symb, char *name)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* lookup_arg_by_name           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>symb</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>name</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возвращает указатель на символ-аргумент с заданным идентификатором name в заданной таблице символов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>имя аргумента </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на найденный аргумент, либо NULL, если символа с таким именем не существует </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="a7446d59b8f7d3857f897e683f16892e"></a><!-- doxytag: member="symbol.c::lookup_table" ref="a7446d59b8f7d3857f897e683f16892e" args="(symbol *table, char *name)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* lookup_table           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>name</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит поиск символа с заданным идентификатором в заданной таблице символов и возвращает указатель на него в случае успеха. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица символов, где производится поиск </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор для поиска </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на найденный символ, либо NULL, если символ не найден </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="55fdd8dc8ff91443ed501d344e0248fa"></a><!-- doxytag: member="symbol.c::lookup_table_type" ref="55fdd8dc8ff91443ed501d344e0248fa" args="(symbol *table, char *name, int type_mask)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* lookup_table_type           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>type_mask</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит поиск символа с заданным идентификатором и типом в заданной таблице символов и возвращает указатель на него в случае успеха. Является основой для семейства функций lookup* . <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица символов, где производится поиск </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор для поиска </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type_mask</em>&nbsp;</td><td>битовая маска типа символа </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель в таблице символов на найденный символ, либо NULL, если символ не найден </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="3d835bed523442a472d25923e3a53c60"></a><!-- doxytag: member="symbol.c::print_symtable" ref="3d835bed523442a472d25923e3a53c60" args="(symbol *table)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void print_symtable           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>table</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит вывод таблицы символов на экран. Используется при отладке. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица символов </td></tr>
+  </table>
+</dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="fd1b5670849b21ce69962dcd20e8bdb2"></a><!-- doxytag: member="symbol.c::restore_context" ref="fd1b5670849b21ce69962dcd20e8bdb2" args="()" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">void restore_context           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция восстанавливает предыдущий контекст путем выталкивания из стека контекстов верхнего элемента. Вызывается при выходе из функции, например.     </td>
+  </tr>
+</table>
+<a class="anchor" name="9e448cd461ef3fa3bb6e6cb7ffcdcde8"></a><!-- doxytag: member="symbol.c::search_context" ref="9e448cd461ef3fa3bb6e6cb7ffcdcde8" args="(char *name)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* search_context           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top">char *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>name</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция производит поиск только в заданном контексте, в отличие от lookup. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор для поиска </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на найденный символ </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="55da57ff5035d4fea19b315887f439be"></a><!-- doxytag: member="symbol.c::symbol_no" ref="55da57ff5035d4fea19b315887f439be" args="(symbol *symb, char *name, int type_mask)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int symbol_no           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname" nowrap> <em>symb</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>char *&nbsp;</td>
+          <td class="mdname" nowrap> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="md" nowrap align="right"></td>
+          <td class="md"></td>
+          <td class="md" nowrap>int&nbsp;</td>
+          <td class="mdname" nowrap> <em>type_mask</em></td>
+        </tr>
+        <tr>
+          <td class="md"></td>
+          <td class="md">)&nbsp;</td>
+          <td class="md" colspan="2"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возвращает порядковый номер символа (начиная с 0) в заданной таблице символов среди всех символов с типом, подходящим под маску типа type. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>symb</em>&nbsp;</td><td>таблица символов </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>идентификатор символа </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type_mask</em>&nbsp;</td><td>битовая маска типа символов </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>номер символа среди всех символов с подходящим под маску типом </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="09dc6a8c15b6a362c0b87c498fc774af"></a><!-- doxytag: member="symbol.c::tail" ref="09dc6a8c15b6a362c0b87c498fc774af" args="(symbol *table)" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a>* tail           </td>
+          <td class="md" valign="top">(&nbsp;</td>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__symbol.html">symbol</a> *&nbsp;</td>
+          <td class="mdname1" valign="top" nowrap> <em>table</em>          </td>
+          <td class="md" valign="top">&nbsp;)&nbsp;</td>
+          <td class="md" nowrap></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+Функция возвращает указатель на последний символ в заданной таблице символов. <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>table</em>&nbsp;</td><td>таблица символов </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Возвращает:</b></dt><dd>указатель на последний символ в таблице </dd></dl>
+    </td>
+  </tr>
+</table>
+<hr><h2>Переменные</h2>
+<a class="anchor" name="392ba382feed0f22aa154170dd533bb5"></a><!-- doxytag: member="symbol.c::context" ref="392ba382feed0f22aa154170dd533bb5" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__cstack.html">context_stack_member</a>* <a class="el" href="symbol_8h.html#392ba382feed0f22aa154170dd533bb5">context</a> = &amp;<a class="el" href="symbol_8c.html#06391363dc5f1eaeda5f094ba54f36b2">start_context</a>          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+В силу того, что существует всего 2 контекста, максимальное количество элементов стека равно 2. Но, структура context_stack_member разрабатывалась с учетом того, что количество контекстов (вложенности процедур) неограничено. Поэтому, вы сможете легко добавить возможности описания переменных в блоках операторов (как в языке C++), например.     </td>
+  </tr>
+</table>
+<a class="anchor" name="4e8625853c8549421090c03e117a468b"></a><!-- doxytag: member="symbol.c::next_label_no" ref="4e8625853c8549421090c03e117a468b" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int <a class="el" href="symbol_8h.html#4e8625853c8549421090c03e117a468b">next_label_no</a> = 0          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<dl compact><dt><b>См. также:</b></dt><dd><a class="el" href="symbol_8h.html#a44157d0b73e07e80a536b1e3a96281e">install_label</a> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="e535a7669670479373ca5ddfcc94d857"></a><!-- doxytag: member="symbol.c::next_string_no" ref="e535a7669670479373ca5ddfcc94d857" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int <a class="el" href="symbol_8h.html#e535a7669670479373ca5ddfcc94d857">next_string_no</a> = 0          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<dl compact><dt><b>См. также:</b></dt><dd><a class="el" href="symbol_8h.html#aa065bb904647fab32304399032d96c5">install_string</a> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="6f2428b1396c25f5a071ddef6d396da8"></a><!-- doxytag: member="symbol.c::next_temp_no" ref="6f2428b1396c25f5a071ddef6d396da8" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top">int <a class="el" href="symbol_8h.html#6f2428b1396c25f5a071ddef6d396da8">next_temp_no</a> = 0          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<dl compact><dt><b>См. также:</b></dt><dd><a class="el" href="symbol_8h.html#5b025c47854206ad5d5d9804705d86f7">install_temp</a> </dd></dl>
+    </td>
+  </tr>
+</table>
+<a class="anchor" name="06391363dc5f1eaeda5f094ba54f36b2"></a><!-- doxytag: member="symbol.c::start_context" ref="06391363dc5f1eaeda5f094ba54f36b2" args="" --><p>
+<table class="mdTable" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="mdRow">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"><a class="el" href="structtag__cstack.html">context_stack_member</a> <a class="el" href="symbol_8c.html#06391363dc5f1eaeda5f094ba54f36b2">start_context</a>          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+<b>Инициализатор</b><div class="fragment"><pre class="fragment"> {
+                &amp;<a class="code" href="symbol_8c.html#363b2553df3e9b4b723d668d59167daf">global_table</a>,
+                <a class="code" href="symbol_8h.html#070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>
+}
+</pre></div>    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Документация по Компилятор MathC.. Последние изменения: Fri Dec 8 03:27:49 2006. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Windows-1251">
+<title>Компилятор MathC.: Структура tag_cstack</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.4.6 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+    <li id="current"><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li><a href="files.html"><span>Файлы</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li><a href="hierarchy.html"><span>Иерархия&nbsp;классов</span></a></li>
+    <li><a href="functions.html"><span>Поля&nbsp;структур</span></a></li>
+  </ul></div>
+<h1>Структура tag_cstack</h1><!-- doxytag: class="tag_cstack" -->структура, предназначенная для реализации вложенности функций  
+<a href="#_details">Подробнее...</a>
+<p>
+<code>#include &lt;<a class="el" href="symbol_8h-source.html">symbol.h</a>&gt;</code>
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Поля данных</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c79967740646311bc395bc2676bb782d"></a><!-- doxytag: member="tag_cstack::table" ref="c79967740646311bc395bc2676bb782d" args="" -->
+<a class="el" href="structtag__symbol.html">symbol</a> **&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag__cstack.html#c79967740646311bc395bc2676bb782d">table</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">таблица символов контекста <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e18f26fa4190e394db310c3eb3a9e995"></a><!-- doxytag: member="tag_cstack::next" ref="e18f26fa4190e394db310c3eb3a9e995" args="" -->
+<a class="el" href="structtag__cstack.html">tag_cstack</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag__cstack.html#e18f26fa4190e394db310c3eb3a9e995">next</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">предыдущий (глобальный) контекст <br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+Стуктура предназначена для реализации вложенности функций. На самом деле возможности ее используются не полностью, так как существуют всего два уровня вложенности: глобальный и локальный (функция), что следует из спецификации языка. Поэтому вложенные элементы называются контекстами: локальный и глобальный. 
+<p>
+<hr>Объявления и описания членов структуры находятся в файле:<ul>
+<li><a class="el" href="symbol_8h-source.html">symbol.h</a></ul>
+<hr size="1"><address style="align: right;"><small>Документация по Компилятор MathC.. Последние изменения: Fri Dec 8 03:27:49 2006. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Windows-1251">
+<title>Компилятор MathC.: Исходный файл code3.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.4.6 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+    <li><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li id="current"><a href="files.html"><span>Файлы</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Файлы</span></a></li>
+    <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+  </ul></div>
+<h1>code3.h</h1><a href="code3_8h.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00010"></a>00010 <span class="preprocessor">#ifndef __CODE3_H</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define __CODE3_H</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include "<a class="code" href="symbol_8h.html">symbol.h</a>"</span>
+<a name="l00014"></a>00014 
+<a name="l00016"></a>00016 
+<a name="l00017"></a><a class="code" href="code3_8h.html#75a9903938da31e530a136d37a839848">00017</a> <span class="preprocessor">#define OP_PLUS         0</span>
+<a name="l00018"></a><a class="code" href="code3_8h.html#b62390fc8d7f39a0edfd26f5c30df780">00018</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_MINUS        1</span>
+<a name="l00019"></a><a class="code" href="code3_8h.html#371f53fb34126aa75001e968442f1a3d">00019</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_MULT         2</span>
+<a name="l00020"></a><a class="code" href="code3_8h.html#ddec4be73478fb9243f0ea0087366641">00020</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_DIV          3</span>
+<a name="l00021"></a><a class="code" href="code3_8h.html#7fce32051dce74884d2c9fb34bb888e4">00021</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_MOD          4</span>
+<a name="l00022"></a>00022 <span class="preprocessor"></span>
+<a name="l00023"></a><a class="code" href="code3_8h.html#58a569495ac1e4285fe881d6a7f8035c">00023</a> <span class="preprocessor">#define OP_ASSIGN       5</span>
+<a name="l00024"></a><a class="code" href="code3_8h.html#14dad180366384594f7cd75480ff73e4">00024</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_GOTO         6</span>
+<a name="l00025"></a><a class="code" href="code3_8h.html#2fd19847b6cc65b671f60c81fd3f141c">00025</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_IF           7</span>
+<a name="l00026"></a>00026 <span class="preprocessor"></span>
+<a name="l00027"></a><a class="code" href="code3_8h.html#0fa482032824fe178a5c8510a6b268e8">00027</a> <span class="preprocessor">#define OP_GT           8</span>
+<a name="l00028"></a><a class="code" href="code3_8h.html#46bdddc9779bf0e995e3f078aa6e5d2b">00028</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_EQ           9</span>
+<a name="l00029"></a><a class="code" href="code3_8h.html#9478d756846491c866d134aab8c48297">00029</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_LW           10</span>
+<a name="l00030"></a><a class="code" href="code3_8h.html#81d577022941aa88aac9f64eef8d7faf">00030</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_GE           11</span>
+<a name="l00031"></a><a class="code" href="code3_8h.html#e26997ae51e5ac9ad3717d9010ef9c92">00031</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_LE           12</span>
+<a name="l00032"></a><a class="code" href="code3_8h.html#cbc133835afb06c2530816d6666ba09e">00032</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_NEQ          13</span>
+<a name="l00033"></a><a class="code" href="code3_8h.html#e1644092ddcfd072d2892e1b740431c1">00033</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_NOT          14</span>
+<a name="l00034"></a><a class="code" href="code3_8h.html#c56577e3b08d3c7453db5d81d96bf05b">00034</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_AND          15</span>
+<a name="l00035"></a><a class="code" href="code3_8h.html#da17ceeb97ff33a840db0943f9821c5b">00035</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_OR           16</span>
+<a name="l00036"></a><a class="code" href="code3_8h.html#af7ce11035df86913b327efb840ebd2a">00036</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_XOR          17</span>
+<a name="l00037"></a>00037 <span class="preprocessor"></span>
+<a name="l00038"></a><a class="code" href="code3_8h.html#9a77659067ccaf5832e99d6e55264535">00038</a> <span class="preprocessor">#define OP_PARAM        18</span>
+<a name="l00039"></a><a class="code" href="code3_8h.html#4583668f6d2a4965e5cb28a2c7b3e2e6">00039</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_CALL         19</span>
+<a name="l00040"></a>00040 <span class="preprocessor"></span>
+<a name="l00041"></a><a class="code" href="code3_8h.html#896bbe976fbf33e85f49f650480f4a49">00041</a> <span class="preprocessor">#define OP_POW          20</span>
+<a name="l00042"></a><a class="code" href="code3_8h.html#ead3adc1f73499c715cb5a1ab8e91c51">00042</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_PLUSPLUS     21</span>
+<a name="l00043"></a><a class="code" href="code3_8h.html#bec80dfe39a82c8d35e1dfbb4295583f">00043</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_MINUSMINUS   22</span>
+<a name="l00044"></a>00044 <span class="preprocessor"></span>
+<a name="l00045"></a><a class="code" href="code3_8h.html#0a06c6c3812e6e0a18ab3a8912d62f31">00045</a> <span class="preprocessor">#define OP_RET          23</span>
+<a name="l00046"></a><a class="code" href="code3_8h.html#db4910b1a57fec032ae627d297c1f014">00046</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_PRINT        24</span>
+<a name="l00047"></a><a class="code" href="code3_8h.html#2de49861c663d987c5876b959396946b">00047</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_READ         25</span>
+<a name="l00048"></a><a class="code" href="code3_8h.html#802631aef53e649fe75dbabec3721c27">00048</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_LABEL        26</span>
+<a name="l00049"></a><a class="code" href="code3_8h.html#6d74dbe0efd6d0dab0f2fea2aa1c34ae">00049</a> <span class="preprocessor"></span><span class="preprocessor">#define OP_PRINTLN      27</span>
+<a name="l00050"></a>00050 <span class="preprocessor"></span>
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 
+<a name="l00054"></a>00054 
+<a name="l00056"></a><a class="code" href="structtag__code.html">00056</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structtag__code.html">tag_code</a> {
+<a name="l00057"></a><a class="code" href="structtag__code.html#626765f4611621d6e077fb7286b88aab">00057</a>         <span class="keywordtype">int</span> <a class="code" href="structtag__code.html#626765f4611621d6e077fb7286b88aab">op</a>;                                                            
+<a name="l00058"></a><a class="code" href="structtag__code.html#d01d94a85d28136b41fdf7979d5e2df6">00058</a>         <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="structtag__code.html#18bf36d1bcaad0bde07823cc5cf4c72d">arg1</a>,                                              
+<a name="l00059"></a>00059                 *<a class="code" href="structtag__code.html#d01d94a85d28136b41fdf7979d5e2df6">arg2</a>;                             
+<a name="l00060"></a><a class="code" href="structtag__code.html#e66c73c0b6ccb14e414b049374187863">00060</a>         <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="structtag__code.html#e66c73c0b6ccb14e414b049374187863">result</a>;                                            
+<a name="l00061"></a><a class="code" href="structtag__code.html#ab725e2ed0b40b09150555f20e646839">00061</a>         <span class="keywordtype">int</span> <a class="code" href="structtag__code.html#ab725e2ed0b40b09150555f20e646839">type</a>;                                                          
+<a name="l00062"></a>00062 
+<a name="l00063"></a><a class="code" href="structtag__code.html#3ad945cf3b0d482564ef3263b2afb6a1">00063</a>         <span class="keyword">struct </span><a class="code" href="structtag__code.html">tag_code</a> *<a class="code" href="structtag__code.html#b02c578641fdd28770f317e0dace8b39">next</a>,                             
+<a name="l00064"></a>00064                 *<a class="code" href="structtag__code.html#3ad945cf3b0d482564ef3263b2afb6a1">prev</a>;             
+<a name="l00065"></a>00065 } <a class="code" href="structtag__code.html">code</a>;
+<a name="l00066"></a>00066 
+<a name="l00068"></a>00068 
+<a name="l00077"></a>00077 <a class="code" href="structtag__code.html">code</a> *<a class="code" href="code3_8c.html#604da1da4b41c3cad69379388ffe6bd8">gen_code</a>(<span class="keywordtype">int</span> <a class="code" href="structtag__code.html#626765f4611621d6e077fb7286b88aab">op</a>, <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="structtag__code.html#18bf36d1bcaad0bde07823cc5cf4c72d">arg1</a>, <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="structtag__code.html#d01d94a85d28136b41fdf7979d5e2df6">arg2</a>, <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="structtag__code.html#e66c73c0b6ccb14e414b049374187863">result</a>, <span class="keywordtype">int</span> <a class="code" href="structtag__code.html#ab725e2ed0b40b09150555f20e646839">type</a>);
+<a name="l00079"></a>00079 
+<a name="l00085"></a>00085 <a class="code" href="structtag__code.html">code</a> *<a class="code" href="code3_8c.html#5d76f2a7e872a9d12a9ea4e59ac3667b">merge_code</a>(<a class="code" href="structtag__code.html">code</a> *code1,<a class="code" href="structtag__code.html">code</a> *code2);
+<a name="l00087"></a>00087 
+<a name="l00092"></a>00092 <a class="code" href="structtag__code.html">code</a> *<a class="code" href="code3_8c.html#02c11dc9a7c5eaa5f5bcb61bd29f71ac">code_tail</a>(<a class="code" href="structtag__code.html">code</a> *c);
+<a name="l00094"></a>00094 
+<a name="l00100"></a>00100 <span class="keywordtype">char</span> *<a class="code" href="code3_8c.html#717025e0f1e41abd13a46c9f57034c92">codestr</a>(<a class="code" href="structtag__code.html">code</a> c,<span class="keywordtype">char</span> *str);
+<a name="l00102"></a>00102 
+<a name="l00106"></a>00106 <span class="keywordtype">void</span> <a class="code" href="code3_8c.html#a9a81a7ce72f21187de6f1c2cd98b032">print_code_chain</a>(<a class="code" href="structtag__code.html">code</a> *chain);
+<a name="l00108"></a>00108 
+<a name="l00112"></a>00112 <span class="keywordtype">void</span> <a class="code" href="code3_8c.html#7cbb3331ae82fbe7073b40d2f749e6f7">destroy_code</a>(<a class="code" href="structtag__code.html">code</a> *c);
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114 <span class="preprocessor">#endif</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Документация по Компилятор MathC.. Последние изменения: Fri Dec 8 03:27:49 2006. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
+</body>
+</html>

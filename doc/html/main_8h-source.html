@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=Windows-1251">
+<title>Компилятор MathC.: Исходный файл main.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.4.6 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+    <li><a href="annotated.html"><span>Структуры&nbsp;данных</span></a></li>
+    <li id="current"><a href="files.html"><span>Файлы</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Файлы</span></a></li>
+    <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+  </ul></div>
+<h1>main.h</h1><a href="main_8h.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00009"></a>00009 <span class="preprocessor">#ifndef __MAIN_H</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#define __MAIN_H</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span>
+<a name="l00013"></a><a class="code" href="main_8h.html#0943f558a560b9b5fa0593d7e36496c1">00013</a> <span class="preprocessor">#define YYERROR_VERBOSE 1</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span>
+<a name="l00015"></a><a class="code" href="main_8h.html#853b3bfad6d2b2ff693dce81182e0c2e">00015</a> <span class="preprocessor">#define YYDEBUG 1</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include "<a class="code" href="symbol_8h.html">symbol.h</a>"</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include "<a class="code" href="code3_8h.html">code3.h</a>"</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include "<a class="code" href="codetable_8h.html">codetable.h</a>"</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include "<a class="code" href="asm__code_8h.html">asm_code.h</a>"</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include "<a class="code" href="unistack_8h.html">unistack.h</a>"</span>
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="preprocessor">#include "math.h"</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include "stdio.h"</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include "stdlib.h"</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include "stdarg.h"</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include "string.h"</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include "time.h"</span>
+<a name="l00029"></a>00029 
+<a name="l00031"></a>00031 
+<a name="l00047"></a><a class="code" href="main_8h.html#8bdd19cad331a646ae8375be00e34cb3">00047</a> <span class="preprocessor">#define __STDC__</span>
+<a name="l00048"></a>00048 <span class="preprocessor"></span>
+<a name="l00050"></a><a class="code" href="main_8h.html#cd6bc0457bea3afb46bb10e75cbeffc8">00050</a> <span class="preprocessor">#define VALUE(e)        (e.type &amp; TYPE_INT ? e.val.ival : (e.type &amp; TYPE_FLOAT ? e.val.fval : 0))</span>
+<a name="l00051"></a>00051 <span class="preprocessor"></span>
+<a name="l00053"></a><a class="code" href="main_8h.html#37eaede074e65020898e4a681ba00970">00053</a> <span class="preprocessor">#define ASMTMPFILE      "tmpfile.asm"</span>
+<a name="l00054"></a>00054 <span class="preprocessor"></span>
+<a name="l00055"></a><a class="code" href="main_8h.html#4f30a22edc6eb8ca598a3145ae372ec6">00055</a> <span class="preprocessor">#define OBJTMPFILE      "tmpfile.obj"</span>
+<a name="l00056"></a>00056 <span class="preprocessor"></span>
+<a name="l00057"></a>00057 
+<a name="l00061"></a><a class="code" href="main_8h.html#197cb6313b54a1db304962625cc31903">00061</a> <span class="preprocessor">#define LIBS "win32.LIB libc.lib crtdll.lib iolayer.obj floating.obj"</span>
+<a name="l00062"></a>00062 <span class="preprocessor"></span>
+<a name="l00064"></a><a class="code" href="main_8h.html#32dfc8ad252bf7dbd2a6ea883b5d3924">00064</a> <span class="preprocessor">#define BINDIR  "bin"</span>
+<a name="l00065"></a>00065 <span class="preprocessor"></span>
+<a name="l00066"></a><a class="code" href="main_8h.html#e24a78ceaebf7b57370579c69c68fae0">00066</a> <span class="preprocessor">#define LIBDIR  "lib"</span>
+<a name="l00067"></a>00067 <span class="preprocessor"></span>
+<a name="l00068"></a>00068 <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="main_8c.html#501b314f49b3a9ff6e7be599d94686ee">lineno</a>;
+<a name="l00069"></a>00069 <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="main_8c.html#ea00bde7de8cb1208a9fbc75412c15d1">curr_type</a>, 
+<a name="l00070"></a>00070 <a class="code" href="main_8c.html#a46b6b8b32954341b8782c018c5e4464">param_count</a>,
+<a name="l00071"></a>00071 <a class="code" href="main_8c.html#3f6196d8105a844858c0a576a1a03bc0">param_index</a>;
+<a name="l00072"></a>00072 <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="main_8c.html#9c86d1c12a59ac5081cfcee30ad8c5e3">expr_count</a>;
+<a name="l00073"></a>00073 <span class="keyword">extern</span> <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="main_8c.html#4d1caae9beb3c69b72353e18429a2581">curr_symbol</a>,
+<a name="l00074"></a>00074 *<a class="code" href="main_8c.html#218a9909e2c5f1353b649be2b787af2e">call_function</a>,
+<a name="l00075"></a>00075 *<a class="code" href="main_8c.html#8e0323cd18f41f25484766c504986b06">curr_function</a>,
+<a name="l00076"></a>00076 *<a class="code" href="main_8c.html#2f2b184ca6696d0b9495f13887457737">temp</a>;
+<a name="l00077"></a>00077 <span class="keyword">extern</span> <span class="keywordtype">char</span> <a class="code" href="main_8c.html#2e761ef58a53e45c838599d5131284ed">error_flag</a>,
+<a name="l00078"></a>00078 <a class="code" href="main_8c.html#d1c88bcbed0caf973171ac7b744d2378">proc_definition</a>,
+<a name="l00079"></a>00079 <a class="code" href="main_8c.html#ab1e405faa3cbaab14811aee1d985379">syn_errflag</a>,
+<a name="l00080"></a>00080 <a class="code" href="main_8c.html#3702dbbed634c23907d687da44cd8b23">compile_only</a>;
+<a name="l00081"></a>00081 
+<a name="l00083"></a><a class="code" href="unionvalptr__t.html">00083</a> <span class="keyword">typedef</span> <span class="keyword">union </span>{
+<a name="l00084"></a><a class="code" href="unionvalptr__t.html#33de06698cdde585b2e7430ddcbf0898">00084</a>         <a class="code" href="structtag__symbol.html">symbol</a> *ptr;                                               
+<a name="l00085"></a><a class="code" href="unionvalptr__t.html#69caed6d8bd9d5ddd5d27048d9606f8f">00085</a>         <a class="code" href="uniontag__val.html">val_t</a> val;                                                         
+<a name="l00086"></a>00086 } <a class="code" href="unionvalptr__t.html">valptr_t</a>;
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="keyword">extern</span> <a class="code" href="unionvalptr__t.html">valptr_t</a> <a class="code" href="main_8c.html#457e31f4ebc11623a9b7ca8a1e80b488">valptr</a>;
+<a name="l00089"></a>00089 
+<a name="l00091"></a>00091 
+<a name="l00097"></a><a class="code" href="structtag__fci__t.html">00097</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structtag__fci__t.html">tag_fci_t</a> {
+<a name="l00098"></a><a class="code" href="structtag__fci__t.html#1c13280d1bc0b1ce29119abeb4a85428">00098</a>         <a class="code" href="structtag__symbol.html">symbol</a> *<a class="code" href="structtag__fci__t.html#1c13280d1bc0b1ce29119abeb4a85428">call_function</a>;                             
+<a name="l00099"></a><a class="code" href="structtag__fci__t.html#bef261919833dc2c7a5c6d6dfde4111b">00099</a>         <span class="keywordtype">int</span> <a class="code" href="structtag__fci__t.html#bef261919833dc2c7a5c6d6dfde4111b">param_index</a>;                                           
+<a name="l00100"></a><a class="code" href="structtag__fci__t.html#67af13840fda80f684e517a2325a54c0">00100</a>         <span class="keywordtype">int</span> <a class="code" href="structtag__fci__t.html#67af13840fda80f684e517a2325a54c0">param_count</a>;                                           
+<a name="l00101"></a>00101 } <a class="code" href="structtag__fci__t.html">fci_t</a>;
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 <span class="keyword">extern</span> <a class="code" href="structtag__stack__t.html">stack_t</a> *<a class="code" href="main_8c.html#cf3886e01098a3daa11a5fb0e7003a0b">fci_stack</a>;
+<a name="l00104"></a>00104 
+<a name="l00106"></a>00106 
+<a name="l00112"></a>00112 <span class="keywordtype">void</span> <a class="code" href="main_8c.html#01fc23b949cca837ca10f29e8f457e9b">static_error</a>(<span class="keywordtype">char</span> *tstr, <span class="keywordtype">char</span> *format, ... );
+<a name="l00113"></a>00113 
+<a name="l00115"></a>00115 
+<a name="l00118"></a>00118 <span class="keywordtype">void</span> <a class="code" href="main_8c.html#2ef30c42cbc289d899a8be5d2d8f77d0">usage</a>();
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120 <span class="preprocessor">#endif</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Документация по Компилятор MathC.. Последние изменения: Fri Dec 8 03:27:49 2006. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.6 </small></address>
+</body>
+</html>
